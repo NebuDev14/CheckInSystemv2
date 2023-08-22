@@ -19,7 +19,7 @@ export default function Home() {
   const { isLoading, data } = useSWR(
     "http://localhost:3000/api/trains",
     fetcher,
-    { refreshInterval: 36000 }
+    { refreshInterval: 30000 }
   );
   const stops: Stop[] = [];
 
@@ -35,8 +35,6 @@ export default function Home() {
         : null
     );
   }
-
-  console.log(stops);
 
   return (
     <main className={`min-h-screen   ${inter.className}`}>
@@ -63,7 +61,7 @@ export default function Home() {
               <div className="px-4 py-2">
                 <h1 className="text-lg">6:07 PM</h1>
                 <h1 className="text-lg">6:15 PM</h1>
-                <h1 className="text-lg">...</h1>
+                <h1 className="text-lg ml-6">┋</h1>
               </div>
             </div>
           </header>
