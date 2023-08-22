@@ -16,15 +16,23 @@ export type Stop = {
 export default function Home() {
   const fetcher = (url: string) =>
     fetch(url).then((r) => r.json());
-  const { isLoading, data } = useSWR(
+
+  const { isLoading, data: trainData } = useSWR(
     "http://localhost:3000/api/trains",
     fetcher,
     { refreshInterval: 30000 }
   );
+
+  const { data: tramData } = useSWR(
+    "http://localhost:3000/api/tram",
+    fetcher,
+    { refreshInterval: 4.32E7 }
+  )
+
   const stops: Stop[] = [];
 
   if (!isLoading) {
-    data.forEach((train: any) =>
+    trainData.forEach((train: any) =>
       train.times[0]
         ? stops.push({
             train: train.route.shortName,
