@@ -1,4 +1,5 @@
 import { IoMdTrain } from "react-icons/io";
+import { Stop } from "@/pages/api/trains";
 
 export const Trains: React.FC = () => {
   return (

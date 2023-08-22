@@ -7,7 +7,7 @@ const codes = [
   "3A629"
 ]
 
-type Stop = {
+export type Stop = {
   train: string;
   destination: string;
   headSign: string;
@@ -26,15 +26,22 @@ export default async function handler(
       .then((res => res.json()))
       // @ts-ignore
       .then(data => data[0].groups.forEach(train => {
+
+        const shortName = train.route.shortName;
+        const headSign = train.times[0].stopHeadsign;
+        const destination = train.times[0].tripHeadsign
+        const time = train.times[0].arrivalFmt
+
         incoming = [...incoming, {
-          train: train.route.shortName as string,
-          destination: train.times[0].tripHeadsign as string,
-          headSign: train.times[0].stopHeadsign as string,
-          time: train.times[0].arrivalFmt as string,
+          train: shortName,
+          destination,
+          headSign,
+          time
         }]
+
       }))
       .catch((e) => console.log(e))
     i == codes.length - 1 ? res.status(200).json(incoming) : null // i HATE js THIS LANGUAGE IS SO STUPID
   })
-
+  
 }
