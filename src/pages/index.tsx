@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import { FaTram } from "react-icons/fa";
 import { Trains } from "@/components/Trains";
-import useSwr from "swr";
+import useSWRInfinite from "swr";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,9 +16,10 @@ export type Stop = {
 export default function Home() {
   const fetcher = (url: string) =>
     fetch(url, { next: { revalidate: 60 } }).then((r) => r.json());
-  const { isLoading, data } = useSwr(
+  const { isLoading, data } = useSWRInfinite(
     "http://localhost:3000/api/trains",
-    fetcher
+    fetcher,
+    { refreshInterval: 60 }
   );
   const stops: Stop[] = [];
 
@@ -40,7 +41,7 @@ export default function Home() {
   return (
     <main className={`min-h-screen   ${inter.className}`}>
       <div className="bg-zinc-900 flex items-center justify-center py-6">
-        <Image src={"/trace.svg"} alt="logo" width={300} height={300} />
+        <Image src={"/trace.svg"} alt="logo" width={275} height={275} />
       </div>
       <div className="flex flex-col w-full p-4">
         <article className="h-full mb-6 flex  shadow-lg rounded-2xl border-zinc-800">
