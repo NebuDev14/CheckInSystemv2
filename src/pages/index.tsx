@@ -58,10 +58,10 @@ export default function Home() {
                 <h1 className="text-5xl font-bold">15</h1>
                 <h1 className="text-xl ">minutes</h1>
               </div>
-              <div className="px-4 py-2">
-                <h1 className="text-lg">6:07 PM</h1>
+              <div className="px-4 py-2 text-center">
+                <h1 className="text-lg text-center">6:07 PM</h1>
                 <h1 className="text-lg">6:15 PM</h1>
-                <h1 className="text-lg ml-6">┋</h1>
+                <h1 className="text-lg">┋</h1>
               </div>
             </div>
           </header>

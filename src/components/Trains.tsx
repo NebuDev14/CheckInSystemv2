@@ -12,7 +12,7 @@ export const Trains: React.FC<{ trains: Stop[] }> = ({ trains }) => {
       <article className="h-full flex flex-row-reverse  shadow-lg rounded-2xl border-zinc-800">
         <div className="flex items-center justify-center px-6 py-auto bg-orange-500 rounded-r-2xl">
           <h1 className=" text-4xl text-white font-semibold font-inter ">
-            <IoMdTrain />
+            <IoMdTrain size={40} />
           </h1>
         </div>
 
@@ -22,7 +22,7 @@ export const Trains: React.FC<{ trains: Stop[] }> = ({ trains }) => {
           </h1>
           <div className="grid h-full grid-cols-2 gap-2">
             <div className="flex flex-col items-center text-center justify-start border-r-2 border-r-zinc-300">
-              <h1 className="font-semibold mb-4">Uptown / Queens</h1>
+              <h1 className=" mb-4">Uptown / Queens</h1>
               {sortedTrains
                 .filter(
                   (train) =>
@@ -32,17 +32,19 @@ export const Trains: React.FC<{ trains: Stop[] }> = ({ trains }) => {
                 .slice(0, 4)
                 .map((train, i) => (
                   <div className="grid grid-cols-3 gap-2 mb-3" key={i}>
-                    <Image
-                      src={`/trains/${train.train}.svg`}
-                      alt={`${train.train} symbol`}
-                      width={22}
-                      height={22}
-                      className="w-1/2"
-                    />
+                    <div className="flex items-center justify-start">
+                      <Image
+                        src={`/trains/${train.train}.svg`}
+                        alt={`${train.train} symbol`}
+                        width={22}
+                        height={22}
+                        className="w-1/2"
+                      />
+                    </div>
                     <h1 className="-ml-6 text-sm flex items-center justify-center">
                       {train.destination.substring(0, 6) + "..."}
                     </h1>
-                    <h1 className="-ml-3 text-sm font-bold">
+                    <h1 className="-ml-3 text-sm font-bold flex items-center justify-center">
                       {train.time
                         .toLocaleTimeString("en-US")
                         .substring(
@@ -59,23 +61,25 @@ export const Trains: React.FC<{ trains: Stop[] }> = ({ trains }) => {
             </div>
 
             <div className="flex flex-col items-center text-center justify-start ">
-              <h1 className="font-semibold mb-4">Downtown</h1>
+              <h1 className=" mb-4">Downtown</h1>
               {sortedTrains
                 .filter((train) => train.headSign.includes("Downtown"))
                 .slice(0, 4)
                 .map((train, i) => (
                   <div className="grid h-full grid-cols-3 gap-2 mb-3" key={i}>
-                    <Image
-                      src={`/trains/${train.train}.svg`}
-                      alt={`${train.train} symbol`}
-                      width={22}
-                      height={22}
-                      className="w-1/2 "
-                    />
+                    <div className="flex items-center justify-start">
+                      <Image
+                        src={`/trains/${train.train}.svg`}
+                        alt={`${train.train} symbol`}
+                        width={22}
+                        height={22}
+                        className="w-1/2"
+                      />
+                    </div>
                     <h1 className="-ml-6 text-sm flex items-center justify-center">
                       {train.destination.substring(0, 6) + "..."}
                     </h1>
-                    <h1 className="-ml-3 text-sm font-bold">
+                    <h1 className="-ml-3 text-sm font-bold flex items-center justify-center">
                       {train.time
                         .toLocaleTimeString("en-US")
                         .substring(

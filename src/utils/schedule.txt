@@ -1,0 +1,345 @@
+trip_id,arrival_time,departure_time,stop_id,stop_sequence,stop_headsign,pickup_type,drop_off_type,continuous_pickup,continuous_drop_off,shape_dist_traveled,timepoint
+car1_Standard_toM_060000,06:00:00,06:00:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_060000,06:07:30,06:08:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_061500,06:15:00,06:15:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_061500,06:22:30,06:23:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_063000,06:30:00,06:30:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_063000,06:37:30,06:38:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_064500,06:45:00,06:45:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_064500,06:52:30,06:53:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_070000,07:00:00,07:00:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_070000,07:07:30,07:08:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_071500,07:15:00,07:15:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_071500,07:22:30,07:23:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_073000,07:30:00,07:30:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_073000,07:37:30,07:38:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_074500,07:45:00,07:45:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_074500,07:52:30,07:53:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_080000,08:00:00,08:00:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_080000,08:07:30,08:08:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_081500,08:15:00,08:15:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_081500,08:22:30,08:23:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_083000,08:30:00,08:30:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_083000,08:37:30,08:38:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_084500,08:45:00,08:45:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_084500,08:52:30,08:53:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_090000,09:00:00,09:00:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_090000,09:07:30,09:08:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_091500,09:15:00,09:15:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_091500,09:22:30,09:23:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_093000,09:30:00,09:30:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_093000,09:37:30,09:38:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_094500,09:45:00,09:45:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_094500,09:52:30,09:53:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_100000,10:00:00,10:00:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_100000,10:07:30,10:08:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_101500,10:15:00,10:15:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_101500,10:22:30,10:23:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_103000,10:30:00,10:30:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_103000,10:37:30,10:38:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_104500,10:45:00,10:45:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_104500,10:52:30,10:53:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_110000,11:00:00,11:00:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_110000,11:07:30,11:08:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_111500,11:15:00,11:15:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_111500,11:22:30,11:23:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_113000,11:30:00,11:30:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_113000,11:37:30,11:38:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_114500,11:45:00,11:45:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_114500,11:52:30,11:53:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_120000,12:00:00,12:00:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_120000,12:07:30,12:08:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_121500,12:15:00,12:15:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_121500,12:22:30,12:23:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_123000,12:30:00,12:30:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_123000,12:37:30,12:38:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_124500,12:45:00,12:45:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_124500,12:52:30,12:53:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_130000,13:00:00,13:00:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_130000,13:07:30,13:08:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_131500,13:15:00,13:15:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_131500,13:22:30,13:23:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_133000,13:30:00,13:30:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_133000,13:37:30,13:38:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_134500,13:45:00,13:45:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_134500,13:52:30,13:53:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_140000,14:00:00,14:00:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_140000,14:07:30,14:08:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_141500,14:15:00,14:15:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_141500,14:22:30,14:23:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_143000,14:30:00,14:30:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_143000,14:37:30,14:38:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_144500,14:45:00,14:45:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_144500,14:52:30,14:53:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_150000,15:00:00,15:00:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_150000,15:07:30,15:08:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_151500,15:15:00,15:15:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_151500,15:22:30,15:23:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_153000,15:30:00,15:30:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_153000,15:37:30,15:38:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_154500,15:45:00,15:45:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_154500,15:52:30,15:53:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_160000,16:00:00,16:00:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_160000,16:07:30,16:08:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_161500,16:15:00,16:15:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_161500,16:22:30,16:23:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_163000,16:30:00,16:30:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_163000,16:37:30,16:38:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_164500,16:45:00,16:45:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_164500,16:52:30,16:53:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_170000,17:00:00,17:00:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_170000,17:07:30,17:08:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_171500,17:15:00,17:15:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_171500,17:22:30,17:23:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_173000,17:30:00,17:30:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_173000,17:37:30,17:38:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_174500,17:45:00,17:45:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_174500,17:52:30,17:53:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_180000,18:00:00,18:00:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_180000,18:07:30,18:08:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_181500,18:15:00,18:15:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_181500,18:22:30,18:23:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_183000,18:30:00,18:30:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_183000,18:37:30,18:38:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_184500,18:45:00,18:45:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_184500,18:52:30,18:53:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_190000,19:00:00,19:00:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_190000,19:07:30,19:08:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_191500,19:15:00,19:15:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_191500,19:22:30,19:23:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_193000,19:30:00,19:30:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_193000,19:37:30,19:38:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_194500,19:45:00,19:45:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_194500,19:52:30,19:53:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_200000,20:00:00,20:00:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_200000,20:07:30,20:08:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_201500,20:15:00,20:15:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_201500,20:22:30,20:23:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_203000,20:30:00,20:30:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_203000,20:37:30,20:38:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_204500,20:45:00,20:45:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_204500,20:52:30,20:53:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_210000,21:00:00,21:00:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_210000,21:07:30,21:08:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_211500,21:15:00,21:15:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_211500,21:22:30,21:23:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_213000,21:30:00,21:30:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_213000,21:37:30,21:38:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_214500,21:45:00,21:45:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_214500,21:52:30,21:53:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_220000,22:00:00,22:00:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_220000,22:07:30,22:08:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_221500,22:15:00,22:15:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_221500,22:22:30,22:23:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_223000,22:30:00,22:30:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_223000,22:37:30,22:38:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_224500,22:45:00,22:45:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_224500,22:52:30,22:53:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_230000,23:00:00,23:00:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_230000,23:07:30,23:08:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_231500,23:15:00,23:15:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_231500,23:22:30,23:23:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_233000,23:30:00,23:30:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_233000,23:37:30,23:38:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_234500,23:45:00,23:45:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_234500,23:52:30,23:53:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_240000,24:00:00,24:00:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_240000,24:07:30,24:08:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_241500,24:15:00,24:15:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_241500,24:22:30,24:23:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_243000,24:30:00,24:30:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_243000,24:37:30,24:38:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_244500,24:45:00,24:45:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_244500,24:52:30,24:53:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_250000,25:00:00,25:00:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_250000,25:07:30,25:08:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_251500,25:15:00,25:15:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_251500,25:22:30,25:23:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_253000,25:30:00,25:30:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_253000,25:37:30,25:38:00,2,2,,0,0,,,0.956,1
+car1_Standard_toM_254500,25:45:00,25:45:30,1,1,Manhattan,0,0,,,0,1
+car1_Standard_toM_254500,25:52:30,25:53:00,2,2,,0,0,,,0.956,1
+car1_Standard_toRI_060730,06:07:30,06:08:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_060730,06:15:00,06:15:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_062230,06:22:30,06:23:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_062230,06:30:00,06:30:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_063730,06:37:30,06:38:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_063730,06:45:00,06:45:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_065230,06:52:30,06:53:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_065230,07:00:00,07:00:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_070730,07:07:30,07:08:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_070730,07:15:00,07:15:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_072230,07:22:30,07:23:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_072230,07:30:00,07:30:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_073730,07:37:30,07:38:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_073730,07:45:00,07:45:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_075230,07:52:30,07:53:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_075230,08:00:00,08:00:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_080730,08:07:30,08:08:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_080730,08:15:00,08:15:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_082230,08:22:30,08:23:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_082230,08:30:00,08:30:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_083730,08:37:30,08:38:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_083730,08:45:00,08:45:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_085230,08:52:30,08:53:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_085230,09:00:00,09:00:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_090730,09:07:30,09:08:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_090730,09:15:00,09:15:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_092230,09:22:30,09:23:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_092230,09:30:00,09:30:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_093730,09:37:30,09:38:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_093730,09:45:00,09:45:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_095230,09:52:30,09:53:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_095230,10:00:00,10:00:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_100730,10:07:30,10:08:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_100730,10:15:00,10:15:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_102230,10:22:30,10:23:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_102230,10:30:00,10:30:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_103730,10:37:30,10:38:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_103730,10:45:00,10:45:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_105230,10:52:30,10:53:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_105230,11:00:00,11:00:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_110730,11:07:30,11:08:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_110730,11:15:00,11:15:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_112230,11:22:30,11:23:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_112230,11:30:00,11:30:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_113730,11:37:30,11:38:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_113730,11:45:00,11:45:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_115230,11:52:30,11:53:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_115230,12:00:00,12:00:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_120730,12:07:30,12:08:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_120730,12:15:00,12:15:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_122230,12:22:30,12:23:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_122230,12:30:00,12:30:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_123730,12:37:30,12:38:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_123730,12:45:00,12:45:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_125230,12:52:30,12:53:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_125230,13:00:00,13:00:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_130730,13:07:30,13:08:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_130730,13:15:00,13:15:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_132230,13:22:30,13:23:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_132230,13:30:00,13:30:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_133730,13:37:30,13:38:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_133730,13:45:00,13:45:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_135230,13:52:30,13:53:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_135230,14:00:00,14:00:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_140730,14:07:30,14:08:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_140730,14:15:00,14:15:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_142230,14:22:30,14:23:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_142230,14:30:00,14:30:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_143730,14:37:30,14:38:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_143730,14:45:00,14:45:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_145230,14:52:30,14:53:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_145230,15:00:00,15:00:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_150730,15:07:30,15:08:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_150730,15:15:00,15:15:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_152230,15:22:30,15:23:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_152230,15:30:00,15:30:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_153730,15:37:30,15:38:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_153730,15:45:00,15:45:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_155230,15:52:30,15:53:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_155230,16:00:00,16:00:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_160730,16:07:30,16:08:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_160730,16:15:00,16:15:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_162230,16:22:30,16:23:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_162230,16:30:00,16:30:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_163730,16:37:30,16:38:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_163730,16:45:00,16:45:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_165230,16:52:30,16:53:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_165230,17:00:00,17:00:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_170730,17:07:30,17:08:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_170730,17:15:00,17:15:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_172230,17:22:30,17:23:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_172230,17:30:00,17:30:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_173730,17:37:30,17:38:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_173730,17:45:00,17:45:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_175230,17:52:30,17:53:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_175230,18:00:00,18:00:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_180730,18:07:30,18:08:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_180730,18:15:00,18:15:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_182230,18:22:30,18:23:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_182230,18:30:00,18:30:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_183730,18:37:30,18:38:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_183730,18:45:00,18:45:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_185230,18:52:30,18:53:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_185230,19:00:00,19:00:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_190730,19:07:30,19:08:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_190730,19:15:00,19:15:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_192230,19:22:30,19:23:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_192230,19:30:00,19:30:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_193730,19:37:30,19:38:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_193730,19:45:00,19:45:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_195230,19:52:30,19:53:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_195230,20:00:00,20:00:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_200730,20:07:30,20:08:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_200730,20:15:00,20:15:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_202230,20:22:30,20:23:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_202230,20:30:00,20:30:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_203730,20:37:30,20:38:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_203730,20:45:00,20:45:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_205230,20:52:30,20:53:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_205230,21:00:00,21:00:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_210730,21:07:30,21:08:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_210730,21:15:00,21:15:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_212230,21:22:30,21:23:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_212230,21:30:00,21:30:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_213730,21:37:30,21:38:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_213730,21:45:00,21:45:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_215230,21:52:30,21:53:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_215230,22:00:00,22:00:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_220730,22:07:30,22:08:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_220730,22:15:00,22:15:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_222230,22:22:30,22:23:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_222230,22:30:00,22:30:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_223730,22:37:30,22:38:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_223730,22:45:00,22:45:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_225230,22:52:30,22:53:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_225230,23:00:00,23:00:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_230730,23:07:30,23:08:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_230730,23:15:00,23:15:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_232230,23:22:30,23:23:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_232230,23:30:00,23:30:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_233730,23:37:30,23:38:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_233730,23:45:00,23:45:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_235230,23:52:30,23:53:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_235230,24:00:00,24:00:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_240730,24:07:30,24:08:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_240730,24:15:00,24:15:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_242230,24:22:30,24:23:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_242230,24:30:00,24:30:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_243730,24:37:30,24:38:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_243730,24:45:00,24:45:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_245230,24:52:30,24:53:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_245230,25:00:00,25:00:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_250730,25:07:30,25:08:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_250730,25:15:00,25:15:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_252230,25:22:30,25:23:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_252230,25:30:00,25:30:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_253730,25:37:30,25:38:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_253730,25:45:00,25:45:30,1,2,,0,0,,,0.956,1
+car1_Standard_toRI_255230,25:52:30,25:53:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Standard_toRI_255230,26:00:00,26:00:30,1,2,,0,0,,,0.956,1
+car1_Fri-Sat_Extension_toM_260000,26:00:00,26:00:30,1,1,Manhattan,0,0,,,0,1
+car1_Fri-Sat_Extension_toM_260000,26:07:30,26:08:00,2,2,,0,0,,,0.956,1
+car1_Fri-Sat_Extension_toM_261500,26:15:00,26:15:30,1,1,Manhattan,0,0,,,0,1
+car1_Fri-Sat_Extension_toM_261500,26:22:30,26:23:00,2,2,,0,0,,,0.956,1
+car1_Fri-Sat_Extension_toM_263000,26:30:00,26:30:30,1,1,Manhattan,0,0,,,0,1
+car1_Fri-Sat_Extension_toM_263000,26:37:30,26:38:00,2,2,,0,0,,,0.956,1
+car1_Fri-Sat_Extension_toM_264500,26:45:00,26:45:30,1,1,Manhattan,0,0,,,0,1
+car1_Fri-Sat_Extension_toM_264500,26:52:30,26:53:00,2,2,,0,0,,,0.956,1
+car1_Fri-Sat_Extension_toM_270000,27:00:00,27:00:30,1,1,Manhattan,0,0,,,0,1
+car1_Fri-Sat_Extension_toM_270000,27:07:30,27:08:00,2,2,,0,0,,,0.956,1
+car1_Fri-Sat_Extension_toM_271500,27:15:00,27:15:30,1,1,Manhattan,0,0,,,0,1
+car1_Fri-Sat_Extension_toM_271500,27:22:30,27:23:00,2,2,,0,0,,,0.956,1
+car1_Fri-Sat_Extension_toRI_260730,26:07:30,26:08:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Fri-Sat_Extension_toRI_260730,26:15:00,26:15:30,1,2,,0,0,,,0.956,1
+car1_Fri-Sat_Extension_toRI_262230,26:22:30,26:23:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Fri-Sat_Extension_toRI_262230,26:30:00,26:30:30,1,2,,0,0,,,0.956,1
+car1_Fri-Sat_Extension_toRI_263730,26:37:30,26:38:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Fri-Sat_Extension_toRI_263730,26:45:00,26:45:30,1,2,,0,0,,,0.956,1
+car1_Fri-Sat_Extension_toRI_265230,26:52:30,26:53:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Fri-Sat_Extension_toRI_265230,27:00:00,27:00:30,1,2,,0,0,,,0.956,1
+car1_Fri-Sat_Extension_toRI_270730,27:07:30,27:08:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Fri-Sat_Extension_toRI_270730,27:15:00,27:15:30,1,2,,0,0,,,0.956,1
+car1_Fri-Sat_Extension_toRI_272230,27:22:30,27:23:00,2,1,Roosevelt Island,0,0,,,0,1
+car1_Fri-Sat_Extension_toRI_272230,27:30:00,27:30:30,1,2,,0,0,,,0.956,1
