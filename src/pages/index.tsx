@@ -2,11 +2,39 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import { FaTram } from "react-icons/fa";
 import { Trains } from "@/components/Trains";
-
+import useSwr from "swr";
 
 const inter = Inter({ subsets: ["latin"] });
 
+export type Stop = {
+  train: string;
+  destination: string;
+  headSign: string;
+  time: string;
+};
+
 export default function Home() {
+  const fetcher = (url: string) =>
+    fetch(url, { next: { revalidate: 60 } }).then((r) => r.json());
+  const { isLoading, data } = useSwr(
+    "http://localhost:3000/api/trains",
+    fetcher
+  );
+  const stops: Stop[] = [];
+
+  if (!isLoading) {
+    data.forEach((train: any) =>
+      stops.push({
+        train: train.route.shortName,
+        headSign: train.times[0].stopHeadsign,
+        destination: train.times[0].tripHeadsign,
+        time: train.times[0].arrivalFmt,
+      })
+    );
+  }
+
+  console.log(stops);
+
   return (
     <main className={`min-h-screen   ${inter.className}`}>
       <div className="bg-zinc-900 flex items-center justify-center py-6">
@@ -37,7 +65,6 @@ export default function Home() {
             </div>
           </header>
         </article>
-       <Trains />
       </div>
     </main>
   );

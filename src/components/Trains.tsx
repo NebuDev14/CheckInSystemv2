@@ -1,7 +1,9 @@
 import { IoMdTrain } from "react-icons/io";
-import { Stop } from "@/pages/api/trains";
+import { Stop } from "@/pages";
 
-export const Trains: React.FC = () => {
+export const Trains: React.FC<{ trains: Stop[] }> = ({
+  trains
+}) => {
   return (
     <div>
       <article className="h-full flex flex-row-reverse  shadow-lg rounded-2xl border-zinc-800">
