@@ -29,7 +29,7 @@ export default function Home() {
             train: train.route.shortName,
             headSign: train.times[0].stopHeadsign,
             destination: train.times[0].tripHeadsign,
-            time: train.times[0].arrivalFmt,
+            time: new Date(train.times[0].arrivalFmt).toLocaleTimeString('en-US').substring(0, 4),
           })
         : null
     );
@@ -42,8 +42,8 @@ export default function Home() {
       <div className="bg-zinc-900 flex items-center justify-center py-6">
         <Image src={"/trace.svg"} alt="logo" width={300} height={300} />
       </div>
-      <div className="grid grid-rows-3 gap-6 w-full p-4">
-        <article className="h-full flex  shadow-lg rounded-2xl border-zinc-800">
+      <div className="flex flex-col w-full p-4">
+        <article className="h-full mb-6 flex  shadow-lg rounded-2xl border-zinc-800">
           <div className="h-full px-6 py-16 bg-red-500 rounded-l-2xl">
             <h1 className="block w-full text-4xl  text-white font-semibold font-inter">
               <FaTram />
