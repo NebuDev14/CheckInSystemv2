@@ -9,8 +9,8 @@ export const Trains: React.FC<{ trains: Stop[] }> = ({ trains }) => {
   return (
     <div>
       <article className="h-full flex flex-row-reverse  shadow-lg rounded-2xl border-zinc-800">
-        <div className=" px-6 py-16 bg-orange-500 rounded-r-2xl text-right">
-          <h1 className=" text-4xl text-white font-semibold font-inter flex items-center justify-center">
+        <div className="flex items-center justify-center px-6 py-auto bg-orange-500 rounded-r-2xl">
+          <h1 className=" text-4xl text-white font-semibold font-inter ">
             <IoMdTrain />
           </h1>
         </div>
