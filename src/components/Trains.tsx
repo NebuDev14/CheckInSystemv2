@@ -42,7 +42,14 @@ export const Trains: React.FC<{ trains: Stop[] }> = ({ trains }) => {
                       {train.destination.substring(0, 6) + "..."}
                     </h1>
                     <h1 className="-ml-3 text-sm">
-                      {train.time.toLocaleTimeString("en-US").substring(0, 4)}
+                      {train.time
+                        .toLocaleTimeString("en-US")
+                        .substring(
+                          0,
+                          train.time.toLocaleTimeString("en-US").startsWith("1")
+                            ? 5
+                            : 4
+                        )}
                     </h1>
                   </div>
                 ))}
@@ -66,7 +73,14 @@ export const Trains: React.FC<{ trains: Stop[] }> = ({ trains }) => {
                       {train.destination.substring(0, 6) + "..."}
                     </h1>
                     <h1 className="-ml-3 text-sm">
-                      {train.time.toLocaleTimeString("en-US").substring(0, 4)}
+                      {train.time
+                        .toLocaleTimeString("en-US")
+                        .substring(
+                          0,
+                          train.time.toLocaleTimeString("en-US").startsWith("1")
+                            ? 5
+                            : 4
+                        )}
                     </h1>
                   </div>
                 ))}

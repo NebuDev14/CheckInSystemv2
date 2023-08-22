@@ -19,7 +19,7 @@ export default function Home() {
   const { isLoading, data } = useSWR(
     "http://localhost:3000/api/trains",
     fetcher,
-    { refreshInterval: 1000 }
+    { refreshInterval: 36000 }
   );
   const stops: Stop[] = [];
 
