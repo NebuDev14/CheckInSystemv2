@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import { FaTram } from "react-icons/fa";
 import { Trains } from "@/components/Trains";
-import useSWRInfinite from "swr";
+import useSWR from "swr";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,16 +10,16 @@ export type Stop = {
   train: string;
   destination: string;
   headSign: string;
-  time: string;
+  time: Date;
 };
 
 export default function Home() {
   const fetcher = (url: string) =>
-    fetch(url, { next: { revalidate: 60 } }).then((r) => r.json());
-  const { isLoading, data } = useSWRInfinite(
+    fetch(url).then((r) => r.json());
+  const { isLoading, data } = useSWR(
     "http://localhost:3000/api/trains",
     fetcher,
-    { refreshInterval: 60 }
+    { refreshInterval: 1000 }
   );
   const stops: Stop[] = [];
 
@@ -30,7 +30,7 @@ export default function Home() {
             train: train.route.shortName,
             headSign: train.times[0].stopHeadsign,
             destination: train.times[0].tripHeadsign,
-            time: new Date(train.times[0].arrivalFmt).toLocaleTimeString('en-US').substring(0, 4),
+            time: new Date(train.times[0].arrivalFmt),
           })
         : null
     );

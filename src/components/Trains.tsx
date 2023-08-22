@@ -3,6 +3,9 @@ import { Stop } from "@/pages";
 import Image from "next/image";
 
 export const Trains: React.FC<{ trains: Stop[] }> = ({ trains }) => {
+  const sortedTrains = trains.sort(function (a, b) {
+    return a.time.getTime() - b.time.getTime();
+  });
   return (
     <div>
       <article className="h-full flex flex-row-reverse  shadow-lg rounded-2xl border-zinc-800">
@@ -19,7 +22,7 @@ export const Trains: React.FC<{ trains: Stop[] }> = ({ trains }) => {
           <div className="grid h-full grid-cols-2 gap-2">
             <div className="flex flex-col items-center text-center justify-start border-r-2 border-r-zinc-300">
               <h1 className="font-semibold mb-2">Uptown / Qns</h1>
-              {trains
+              {sortedTrains
                 .filter(
                   (train) =>
                     train.headSign.includes("Queens") ||
@@ -38,18 +41,17 @@ export const Trains: React.FC<{ trains: Stop[] }> = ({ trains }) => {
                     <h1 className="-ml-6 text-sm">
                       {train.destination.substring(0, 6) + "..."}
                     </h1>
-                    <h1 className="-ml-3 text-sm">{train.time}</h1>
+                    <h1 className="-ml-3 text-sm">
+                      {train.time.toLocaleTimeString("en-US").substring(0, 4)}
+                    </h1>
                   </div>
                 ))}
             </div>
 
             <div className="flex flex-col items-center text-center justify-start ">
               <h1 className="font-semibold mb-2">Downtown</h1>
-              {trains
-                .filter(
-                  (train) =>
-                    train.headSign.includes("Downtown")
-                )
+              {sortedTrains
+                .filter((train) => train.headSign.includes("Downtown"))
                 .slice(0, 4)
                 .map((train, i) => (
                   <div className="grid h-full grid-cols-3 gap-2 mb-2" key={i}>
@@ -63,7 +65,9 @@ export const Trains: React.FC<{ trains: Stop[] }> = ({ trains }) => {
                     <h1 className="-ml-6 text-sm">
                       {train.destination.substring(0, 6) + "..."}
                     </h1>
-                    <h1 className="-ml-3 text-sm">{train.time}</h1>
+                    <h1 className="-ml-3 text-sm">
+                      {train.time.toLocaleTimeString("en-US").substring(0, 4)}
+                    </h1>
                   </div>
                 ))}
             </div>
