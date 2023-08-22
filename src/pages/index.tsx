@@ -24,12 +24,14 @@ export default function Home() {
 
   if (!isLoading) {
     data.forEach((train: any) =>
-      stops.push({
-        train: train.route.shortName,
-        headSign: train.times[0].stopHeadsign,
-        destination: train.times[0].tripHeadsign,
-        time: train.times[0].arrivalFmt,
-      })
+      train.times[0]
+        ? stops.push({
+            train: train.route.shortName,
+            headSign: train.times[0].stopHeadsign,
+            destination: train.times[0].tripHeadsign,
+            time: train.times[0].arrivalFmt,
+          })
+        : null
     );
   }
 
@@ -65,6 +67,7 @@ export default function Home() {
             </div>
           </header>
         </article>
+        <Trains trains={stops} />
       </div>
     </main>
   );
