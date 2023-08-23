@@ -1,11 +1,37 @@
 import { IoMdTrain } from "react-icons/io";
 import { Stop } from "@/pages";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export const Trains: React.FC<{ trains: Stop[] }> = ({ trains }) => {
   const sortedTrains = trains.sort(function (a, b) {
     return a.time.getTime() - b.time.getTime();
   });
+
+  const [nextTime, setNextTime] = useState<string>(
+    sortedTrains.length !== 0
+      ? (
+          Math.abs(new Date().getTime() - sortedTrains[0].time.getTime()) /
+          1000 /
+          60
+        ).toFixed(0)
+      : ""
+  );
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setNextTime(
+        sortedTrains.length !== 0
+          ? (
+              Math.abs(new Date().getTime() - sortedTrains[0].time.getTime()) /
+              1000 /
+              60
+            ).toFixed(0)
+          : ""
+      );
+    }, 15000);
+    return () => clearInterval(interval);
+  }, [nextTime]);
 
   return (
     <div className="grid grid-cols-2 gap-8">
@@ -14,7 +40,13 @@ export const Trains: React.FC<{ trains: Stop[] }> = ({ trains }) => {
           <h1 className=" py-4 text-6xl text-white font-semibold">QNS</h1>
         </div>
 
-        <header className="flex flex-col justify-end py-3 pl-4 pr-2 leading-tight w-full rounded-bl-2xl  bg-zinc-100 ">
+        <header className="flex flex-col justify-center items-center py-3 pl-4 pr-2 leading-tight w-full rounded-bl-2xl  bg-zinc-100 ">
+          <div className="flex items-center justify-center flex-col mb-4">
+            <h1 className="font-semibold text-[12rem]">{nextTime}</h1>
+            <h1 className="text-7xl ">{`minute${
+              nextTime !== "1" ? "s" : ""
+            }`}</h1>
+          </div>
           <div className="flex flex-col items-center text-center justify-start ">
             {sortedTrains
               .filter(
@@ -22,7 +54,7 @@ export const Trains: React.FC<{ trains: Stop[] }> = ({ trains }) => {
                   train.headSign.includes("Queens") ||
                   train.headSign.includes("Uptown")
               )
-              .slice(0, 4)
+              .slice(1, 3)
               .map((train, i) => (
                 <div className="grid grid-cols-3 gap-2 mb-3" key={i}>
                   <div className="flex items-center justify-start">
