@@ -22,7 +22,7 @@ export const Trains: React.FC<{ trains: Stop[] }> = ({ trains }) => {
           </h1>
           <div className="grid h-full grid-cols-2 gap-2">
             <div className="flex flex-col items-center text-center justify-start border-r-2 border-r-zinc-300">
-              <h1 className=" mb-4">Uptown / Queens</h1>
+              <h1 className=" mb-4">QNS</h1>
               {sortedTrains
                 .filter(
                   (train) =>
@@ -51,7 +51,8 @@ export const Trains: React.FC<{ trains: Stop[] }> = ({ trains }) => {
                           0,
                           (train.time.getHours() >= 10 &&
                             train.time.getHours() <= 12) ||
-                            train.time.getHours() >= 22
+                            train.time.getHours() >= 22 ||
+                            train.time.getHours() === 0
                             ? 5
                             : 4
                         )}
@@ -61,9 +62,9 @@ export const Trains: React.FC<{ trains: Stop[] }> = ({ trains }) => {
             </div>
 
             <div className="flex flex-col items-center text-center justify-start ">
-              <h1 className=" mb-4">Downtown</h1>
+              <h1 className=" mb-4">MNHTN</h1>
               {sortedTrains
-                .filter((train) => train.headSign.includes("Downtown"))
+                .filter((train) => train.headSign.includes("Manhattan"))
                 .slice(0, 4)
                 .map((train, i) => (
                   <div className="grid h-full grid-cols-3 gap-2 mb-3" key={i}>
@@ -86,7 +87,8 @@ export const Trains: React.FC<{ trains: Stop[] }> = ({ trains }) => {
                           0,
                           (train.time.getHours() >= 10 &&
                             train.time.getHours() <= 12) ||
-                            train.time.getHours() >= 22
+                            train.time.getHours() >= 22 ||
+                            train.time.getHours() === 0
                             ? 5
                             : 4
                         )}

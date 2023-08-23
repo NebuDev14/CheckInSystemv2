@@ -3,8 +3,9 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 require("dotenv").config()
 
 const codes = [
-  "3AR11",
-  "3A629"
+  // "3AR11",
+  // "3A629"
+  "3AB06"
 ]
 
 export default async function handler(
