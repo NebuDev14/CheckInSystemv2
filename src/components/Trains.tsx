@@ -3,35 +3,35 @@ import { Stop } from "@/pages";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-export const Trains: React.FC<{ trains: Stop[] }> = ({ trains }) => {
+export const Trains: React.FC<{ trains: Stop[], nextTime: string }> = ({ trains, nextTime }) => {
   const sortedTrains = trains.sort(function (a, b) {
     return a.time.getTime() - b.time.getTime();
   });
 
-  const [nextTime, setNextTime] = useState<string>(
-    sortedTrains.length !== 0
-      ? (
-          Math.abs(new Date().getTime() - sortedTrains[0].time.getTime()) /
-          1000 /
-          60
-        ).toFixed(0)
-      : ""
-  );
+  // const [nextTime, setNextTime] = useState<string>(
+  //   (Math.abs(new Date().getTime() - sortedTrains[0].time.getTime()) /
+  //   1000 /
+  //   60
+  // ).toFixed(0) as string
+  // );
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setNextTime(
-        sortedTrains.length !== 0
-          ? (
-              Math.abs(new Date().getTime() - sortedTrains[0].time.getTime()) /
-              1000 /
-              60
-            ).toFixed(0)
-          : ""
-      );
-    }, 15000);
-    return () => clearInterval(interval);
-  }, [nextTime]);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setNextTime(
+  //       sortedTrains.length !== 0
+  //         ? (
+  //             Math.abs(new Date().getTime() - sortedTrains[0].time.getTime()) /
+  //             1000 /
+  //             60
+  //           ).toFixed(0)
+  //         : ""
+  //     );
+  //   }, 1000);
+  //   return () => clearInterval(interval);
+  // }, [nextTime]);
+
+
+  console.log(nextTime)
 
   return (
     <div className="grid grid-cols-2 gap-8">

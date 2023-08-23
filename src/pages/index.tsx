@@ -23,8 +23,6 @@ export default function Home() {
     { refreshInterval: 30000 }
   );
 
-  console.log(trainData);
-
   const { data: tramData } = useSWR("http://localhost:3000/api/tram", fetcher, {
     refreshInterval: 4.32e7,
   });
@@ -35,16 +33,22 @@ export default function Home() {
     trainData.forEach((train: any) =>
       train.times[0]
         ? train.times.forEach((time: any) => {
-          stops.push({
-            train: train.route.shortName,
-            headSign: time.stopHeadsign,
-            destination: time.tripHeadsign,
-            time: new Date(time.arrivalFmt),
+            stops.push({
+              train: train.route.shortName,
+              headSign: time.stopHeadsign,
+              destination: time.tripHeadsign,
+              time: new Date(time.arrivalFmt),
+            });
           })
-        })
         : null
     );
   }
+
+  const sortedTrains = stops.sort(function (a, b) {
+    return a.time.getTime() - b.time.getTime();
+  });
+
+  console.log(sortedTrains);
 
   return (
     <main className={`min-h-screen  ${inter.className}`}>
@@ -98,7 +102,20 @@ export default function Home() {
             </header>
           </article>
         </div>
-        <Trains trains={stops} />
+        <Trains
+          trains={sortedTrains}
+          nextTime={
+            sortedTrains.length !== 0
+              ? (
+                  Math.abs(
+                    new Date().getTime() - sortedTrains[0].time.getTime()
+                  ) /
+                  1000 /
+                  60
+                ).toFixed(0)
+              : ""
+          }
+        />
       </div>
     </main>
   );
