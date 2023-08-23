@@ -101,16 +101,8 @@ body {
 }
 
 .ferry-loop {
-  	background: linear-gradient(-45deg, #06aed8, #0891b2 , #06b6d4, #22d3ee);
+  	background: linear-gradient(-45deg, #09f1ed, #07a1c7 , #03caed, #57c1ab);
 	animation: gradient 10s ease infinite;
   background-size: 400% 400%;
 }
-
-
-/* .loop {
-  animation-name: change;
-  animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-} */
 

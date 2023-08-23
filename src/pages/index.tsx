@@ -34,12 +34,14 @@ export default function Home() {
   if (!isLoading) {
     trainData.forEach((train: any) =>
       train.times[0]
-        ? stops.push({
+        ? train.times.forEach((time: any) => {
+          stops.push({
             train: train.route.shortName,
-            headSign: train.times[0].stopHeadsign,
-            destination: train.times[0].tripHeadsign,
-            time: new Date(train.times[0].arrivalFmt),
+            headSign: time.stopHeadsign,
+            destination: time.tripHeadsign,
+            time: new Date(time.arrivalFmt),
           })
+        })
         : null
     );
   }
