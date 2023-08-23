@@ -28,12 +28,18 @@ export default function Home() {
   });
 
   const stops: Stop[] = [];
+  let queensStops: Stop[] = [];
+  let manhattanStops: Stop[] = [];
 
   if (!isLoading) {
     trainData.forEach((train: any) =>
       train.times[0]
         ? train.times.forEach((time: any) => {
-            stops.push({
+            (time.stopHeadsign.includes("Queens") ||
+            time.stopHeadsign.includes("Uptown")
+              ? queensStops
+              : manhattanStops
+            ).push({
               train: train.route.shortName,
               headSign: time.stopHeadsign,
               destination: time.tripHeadsign,
@@ -44,11 +50,12 @@ export default function Home() {
     );
   }
 
-  const sortedTrains = stops.sort(function (a, b) {
+  function sortTime(a: Stop, b: Stop) {
     return a.time.getTime() - b.time.getTime();
-  });
+  }
 
-  console.log(sortedTrains);
+  queensStops.sort(sortTime);
+  manhattanStops.sort(sortTime);
 
   return (
     <main className={`min-h-screen  ${inter.className}`}>
@@ -103,12 +110,24 @@ export default function Home() {
           </article>
         </div>
         <Trains
-          trains={sortedTrains}
-          nextTime={
-            sortedTrains.length !== 0
+          queens={queensStops}
+          manhattan={manhattanStops}
+          nextQueensTime={
+            queensStops.length !== 0
               ? (
                   Math.abs(
-                    new Date().getTime() - sortedTrains[0].time.getTime()
+                    new Date().getTime() - queensStops[0].time.getTime()
+                  ) /
+                  1000 /
+                  60
+                ).toFixed(0)
+              : ""
+          }
+          nextManhattanTime={
+            manhattanStops.length !== 0
+              ? (
+                  Math.abs(
+                    new Date().getTime() - manhattanStops[0].time.getTime()
                   ) /
                   1000 /
                   60
