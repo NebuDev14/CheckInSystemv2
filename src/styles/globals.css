@@ -96,13 +96,13 @@ body {
 
 .tram-loop {
 	background: linear-gradient(-45deg, #ed7373, #ee7752, #e73c3c, #dc2626, #f87171, #ccc9c9);
-	animation: gradient 10s ease infinite;
+	animation: gradient 11s ease infinite;
   background-size: 400% 400%;
 }
 
 .ferry-loop {
   	background: linear-gradient(-45deg, #09f1ed, #07a1c7 , #03caed, #57c1ab);
-	animation: gradient 10s ease infinite;
+	animation: gradient 11s ease infinite;
   background-size: 400% 400%;
 }
 

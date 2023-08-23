@@ -8,7 +8,7 @@ export const Trains: React.FC<{
   nextQueensTime: string;
   nextManhattanTime: string;
 }> = ({ queens, manhattan, nextQueensTime, nextManhattanTime }) => {
-  console.log(nextQueensTime);
+
 
   return (
     <div className="grid grid-cols-2 gap-8">
@@ -19,7 +19,7 @@ export const Trains: React.FC<{
 
         <header className="py-3 pl-4 pr-2 leading-tight w-full   ">
           <div className="flex items-center justify-center flex-col mb-12">
-            <h1 className="font-semibold text-[12rem]">{nextQueensTime}</h1>
+            <h1 className="font-semibold text-[14rem]">{nextQueensTime}</h1>
             <h1 className="text-7xl ">{`minute${
               nextQueensTime !== "1" ? "s" : ""
             }`}</h1>
@@ -63,7 +63,7 @@ export const Trains: React.FC<{
 
         <header className="flex flex-col justify-end py-3 pl-4 pr-2 leading-tight w-full   ">
           <div className="flex items-center justify-center flex-col mb-12">
-            <h1 className="font-semibold text-[12rem]">{nextManhattanTime}</h1>
+            <h1 className="font-semibold text-[14rem]">{nextManhattanTime}</h1>
             <h1 className="text-7xl ">{`minute${
               nextManhattanTime !== "1" ? "s" : ""
             }`}</h1>
