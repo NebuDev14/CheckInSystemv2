@@ -163,9 +163,20 @@ export default function Home() {
           </article>
         </div>
 
-        <div className="grid grid-cols-3 gap-8 mb-4">
+        <div className="grid grid-cols-3 gap-5 mb-4">
           <Time />
-          <div className="  ">qr code</div>
+          <div className="flex items-center bg-gradient-to-br py-4 rounded-2xl from-red-500 to-pink-600 flex-col justify-center">
+            <Image
+              src={`/visitor.svg`}
+              alt="qr code"
+              height={300}
+              width={300}
+              className=" rounded-3xl mb-6"
+            />
+            <h1 className="text-white text-center font-semibold font-openSans text-5xl">
+              No ID Card?
+            </h1>
+          </div>
         </div>
 
         {/* <div className="grid grid-cols-3 gap-4 mt-2 mb-8">
