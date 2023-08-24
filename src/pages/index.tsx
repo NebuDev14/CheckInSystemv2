@@ -142,17 +142,17 @@ export default function Home() {
           <FerryBus />
         </div>
 
-        <div className="grid grid-cols-3 gap-5 mb-4">
+        <div className="grid grid-cols-6 gap-4 mb-4">
           <Time />
-          <div className="flex items-center bg-gradient-to-br py-4 rounded-2xl from-red-500 to-pink-600 flex-col justify-center">
+          <div className="flex col col-span-2 items-center bg-gradient-to-br py-4 rounded-2xl from-red-500 to-pink-600 flex-col justify-center">
             <Image
               src={`/visitor.svg`}
               alt="qr code"
-              height={300}
-              width={300}
+              height={250}
+              width={250}
               className=" rounded-3xl mb-6"
             />
-            <h1 className="text-white text-center font-semibold font-openSans text-5xl">
+            <h1 className="text-white text-center font-semibold font-openSans text-3xl">
               No ID Card?
             </h1>
           </div>

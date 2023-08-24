@@ -1,4 +1,3 @@
-import { IoMdTrain } from "react-icons/io";
 import { Stop } from "@/pages";
 import Image from "next/image";
 
@@ -18,7 +17,7 @@ export const Trains: React.FC<{
 
         <header className="flex flex-col items-center justify-center h-full py-3 pl-4 pr-2 leading-tight w-full   ">
           <div className="flex items-center justify-center flex-col mb-12">
-            <h1 className="font-semibold text-[14rem]">{nextQueensTime}</h1>
+            <h1 className="font-semibold text-[22rem]">{nextQueensTime}</h1>
             <h1 className="text-7xl ">{nextQueensTime ? `minute${nextQueensTime !== "1" ? "s" : ""
               }` : "No trains."}</h1>
           </div>
@@ -36,18 +35,8 @@ export const Trains: React.FC<{
               <h1 className="-ml-6 text-3xl mr-4 flex items-center justify-center">
                 {train.destination.length > 23 ? train.destination.slice(0, 16) + "..." : train.destination}
               </h1>
-              <h1 className="mr-6 text-3xl font-semibold flex items-center justify-center">
-                {train.time
-                  .toLocaleTimeString("en-US")
-                  .substring(
-                    0,
-                    (train.time.getHours() >= 10 &&
-                      train.time.getHours() <= 12) ||
-                      train.time.getHours() >= 22 ||
-                      train.time.getHours() === 0
-                      ? 5
-                      : 4
-                  )}
+              <h1 className="mr-6 text-2xl font-semibold flex items-center justify-center">
+                {((train.time.getTime() - (new Date().getTime())) / 1000 / 60).toFixed(0)} min
               </h1>
             </div>
           ))}
@@ -60,7 +49,7 @@ export const Trains: React.FC<{
 
         <header className="flex flex-col items-center justify-center h-full py-3 pl-4 pr-2 leading-tight w-full   ">
           <div className="flex items-center justify-center flex-col mb-12">
-            <h1 className="font-semibold text-[14rem]">{nextManhattanTime}</h1>
+            <h1 className="font-semibold text-[22rem]">{nextManhattanTime}</h1>
             <h1 className="text-7xl ">{nextManhattanTime ? `minute${nextManhattanTime !== "1" ? "s" : ""
               }` : "No trains."}</h1>
           </div>
@@ -78,18 +67,8 @@ export const Trains: React.FC<{
               <h1 className="-ml-6 col-span-2 text-3xl mr-4 text-left flex items-center justify-center">
                 {train.destination.length > 23 ? train.destination.slice(0, 10) + "..." : train.destination}
               </h1>
-              <h1 className="mr-6 text-3xl font-semibold flex items-center justify-center">
-                {train.time
-                  .toLocaleTimeString("en-US")
-                  .substring(
-                    0,
-                    (train.time.getHours() >= 10 &&
-                      train.time.getHours() <= 12) ||
-                      train.time.getHours() >= 22 ||
-                      train.time.getHours() === 0
-                      ? 5
-                      : 4
-                  )}
+              <h1 className="mr-6 text-2xl font-semibold flex items-center justify-center">
+                {((train.time.getTime() - (new Date().getTime())) / 1000 / 60).toFixed(0)} min
               </h1>
             </div>
           ))}
