@@ -57,7 +57,7 @@ export const Time: React.FC = () => {
               </h1>
             </div>
             <div className="flex flex-col items-center justify-center">
-              <h1 className=" text-4xl">{data?.at(0).desc}</h1>
+              <h1 className=" text-4xl text-center mb-1">{data?.at(0).desc}</h1>
               {getIcon(data?.at(0).condition, true)}
               <h1 className="mt-6 font-semibold text-5xl">
                 {data?.at(0).temperature}°F
