@@ -43,7 +43,7 @@ export const Time: React.FC = () => {
   );
 
   return (
-    <div className=" py-6  flex flex-col items-center justify-center rounded-2xl bg-gradient-to-b from-black to-purple-950 text-white h-full">
+    <div className=" py-6 col-span-2  flex flex-col items-center justify-center rounded-2xl bg-gradient-to-b from-black to-purple-950 text-white h-full">
       <article className="h-full flex items-center flex-col justify-center shadow-lg p-2 rounded-2xl duration-200 text-white">
         <header className="flex flex-col items-center justify-center leading-tight w-full rounded-b-2xl ">
           <div className="flex flex-col items-center justify-center px-2">
@@ -57,7 +57,7 @@ export const Time: React.FC = () => {
             </div>
             <div className="flex items-center justify-center">
               {" "}
-              <h1 className="text-2xl font-semibold font-openSans px-4">
+              <h1 className="text-2xl font-semibold font-openSans">
                 {new Date().toLocaleTimeString("en-US", {
                   hour12: true,
                   timeStyle: "short",

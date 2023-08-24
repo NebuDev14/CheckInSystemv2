@@ -73,7 +73,7 @@ export default function Home() {
 
   return (
     <main className={`min-h-screen  ${inter.className}`}>
-      <div className="bg-gradient-to-br from-zinc-900  to-zinc-700 flex items-center justify-center py-6">
+      <div className="bg-gradient-to-br from-zinc-900 to-zinc-700 flex items-center justify-center py-6">
         <Image src={"/trace.svg"} alt="logo" width={300} height={300} />
       </div>
 
@@ -104,7 +104,7 @@ export default function Home() {
               : ""
           }
         />
-        <div className="grid grid-cols-3 gap-8 mt-2 mb-8">
+        <div className="grid grid-cols-3 gap-6 mt-2 mb-8">
           <article className="h-full flex flex-col shadow-lg p-2 rounded-2xl tram-loop duration-200 text-white">
             <div className="h-full flex p-6 pr-0 pb-0 rounded-t-2xl">
               <h1 className="text-white mr-auto font-semibold font-inter ">
@@ -142,18 +142,18 @@ export default function Home() {
           <FerryBus />
         </div>
 
-        <div className="grid grid-cols-6 gap-4 mb-4">
+        <div className="grid grid-cols-12 gap-6 mb-4">
           <Time />
-          <div className="flex col col-span-2 items-center bg-gradient-to-br py-4 rounded-2xl from-red-500 to-pink-600 flex-col justify-center">
+          <div className="flex-col col-span-4 flex bg-gradient-to-br pt-6 pb-8 rounded-2xl from-red-500 to-pink-600 items-center justify-center">
             <Image
               src={`/visitor.svg`}
               alt="qr code"
-              height={250}
-              width={250}
-              className=" rounded-3xl mb-6"
+              height={300}
+              width={300}
+              className=" rounded-3xl mb-8"
             />
-            <h1 className="text-white text-center font-semibold font-openSans text-3xl">
-              No ID Card?
+            <h1 className="text-white text-center font-semibold font-openSans text-4xl">
+              Check In Form
             </h1>
           </div>
         </div>
