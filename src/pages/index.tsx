@@ -34,13 +34,13 @@ export default function Home() {
   const currMinutes = new Date().getHours() * 60 + new Date().getMinutes();
   const tramMinutes = tramData
     ? tramData.times
-        .map(
-          (time: any) =>
-            parseInt(time.split(":")[0]) * 60 +
-            parseInt(time.split(":")[1]) -
-            currMinutes
-        )
-        .filter((time: number) => time > 0)
+      .map(
+        (time: any) =>
+          parseInt(time.split(":")[0]) * 60 +
+          parseInt(time.split(":")[1]) -
+          currMinutes
+      )
+      .filter((time: number) => time > 0)
     : [];
 
   let queensStops: Stop[] = [];
@@ -50,17 +50,17 @@ export default function Home() {
     trainData.forEach((train: any) =>
       train.times[0]
         ? train.times.forEach((time: any) => {
-            (time.stopHeadsign.includes("Queens") ||
+          (time.stopHeadsign.includes("Queens") ||
             time.stopHeadsign.includes("Uptown")
-              ? queensStops
-              : manhattanStops
-            ).push({
-              train: train.route.shortName,
-              headSign: time.stopHeadsign,
-              destination: time.tripHeadsign,
-              time: new Date(time.arrivalFmt),
-            });
-          })
+            ? queensStops
+            : manhattanStops
+          ).push({
+            train: train.route.shortName,
+            headSign: time.stopHeadsign,
+            destination: time.tripHeadsign,
+            time: new Date(time.arrivalFmt),
+          });
+        })
         : null
     );
   }
@@ -77,7 +77,34 @@ export default function Home() {
       <div className="bg-gradient-to-br from-zinc-900  to-zinc-700 flex items-center justify-center py-6">
         <Image src={"/trace.svg"} alt="logo" width={300} height={300} />
       </div>
+
       <div className="flex flex-col w-full p-4">
+        <Trains
+          queens={queensStops}
+          manhattan={manhattanStops}
+          nextQueensTime={
+            queensStops.length !== 0
+              ? (
+                Math.abs(
+                  new Date().getTime() - queensStops[0].time.getTime()
+                ) /
+                1000 /
+                60
+              ).toFixed(0)
+              : ""
+          }
+          nextManhattanTime={
+            manhattanStops.length !== 0
+              ? (
+                Math.abs(
+                  new Date().getTime() - manhattanStops[0].time.getTime()
+                ) /
+                1000 /
+                60
+              ).toFixed(0)
+              : ""
+          }
+        />
         <div className="grid grid-cols-2 gap-8 mt-2 mb-8">
           <article className="h-full flex flex-col shadow-lg p-2 rounded-2xl tram-loop duration-200 text-white">
             <div className="h-full px-4 rounded-t-2xl py-6">
@@ -91,11 +118,16 @@ export default function Home() {
                 <div className="flex items-center items px-2 py-2 ">
                   <div className="mr-auto border-r-2 px-7 flex flex-col justify-center items-center border-r-zinc-300">
                     <h1 className="text-9xl font-bold">{tramMinutes[0]}</h1>
-                    <h1 className="text-5xl mb-4">minutes</h1>
+                    <h1 className="text-5xl mb-4">{`minute${tramMinutes[0] !== 1 ? 's' : ''}`}</h1>
                   </div>
                   <div className="ml-8 text-4xl text-right font-semibold flex flex-col items-end justify-center">
-                    <h1 className=" pr-2 py-2">9:12 PM</h1>
-                    <h1 className=" pr-2 py-2">10:21 PM</h1>
+                    {[...Array(3)].map((_, i) => (
+                      <h1 className=" pr-2 py-2" key={i}>{new Date(new Date().getTime() + tramMinutes[i + 1] * 60000).toLocaleTimeString("en-US", {
+                        hour: "2-digit",
+                        hour12: true, // Delete for 24-hour format
+                        minute: "2-digit"
+                      })}</h1>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -124,32 +156,7 @@ export default function Home() {
             </header>
           </article>
         </div>
-        <Trains
-          queens={queensStops}
-          manhattan={manhattanStops}
-          nextQueensTime={
-            queensStops.length !== 0
-              ? (
-                  Math.abs(
-                    new Date().getTime() - queensStops[0].time.getTime()
-                  ) /
-                  1000 /
-                  60
-                ).toFixed(0)
-              : ""
-          }
-          nextManhattanTime={
-            manhattanStops.length !== 0
-              ? (
-                  Math.abs(
-                    new Date().getTime() - manhattanStops[0].time.getTime()
-                  ) /
-                  1000 /
-                  60
-                ).toFixed(0)
-              : ""
-          }
-        />
+
 
 
         {/* <div className="grid grid-cols-3 gap-8 mt-2 mb-8">
