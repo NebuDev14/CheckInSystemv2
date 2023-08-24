@@ -150,7 +150,9 @@ export default function Home() {
               : ""
           }
         />
-        <div className="grid grid-cols-3 gap-8 mt-2 mb-8">
+
+
+        {/* <div className="grid grid-cols-3 gap-8 mt-2 mb-8">
           <article className="h-full flex  items-center justify-center  shadow-lg p-2 rounded-2xl tram-loop duration-200 text-white">
             <header className="grid grid-cols-2 px-4 items-center justify-center leading-tight w-full rounded-b-2xl ">
               <div className="text-4xl font-semibold flex flex-col items-center">
@@ -218,7 +220,7 @@ export default function Home() {
               </div>
             </header>
           </article>
-        </div>
+        </div> */}
       </div>
     </main>
   );
