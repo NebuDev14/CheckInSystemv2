@@ -14,7 +14,7 @@ export const Trains: React.FC<{
     <div className="grid grid-cols-2 gap-8">
       <article className="h-full flex flex-col shadow-lg rounded-bl-2xl  bg-zinc-100 border-zinc-800">
         <div className="flex items-center justify-center px-6 py-auto bg-gradient-to-r from-orange-600 to-orange-400 rounded-tl-2xl">
-          <h1 className=" py-4 text-6xl text-white font-semibold">QNS</h1>
+          <h1 className=" py-4 text-8xl text-white font-semibold">QNS</h1>
         </div>
 
         <header className="py-3 pl-4 pr-2 leading-tight w-full   ">
@@ -56,9 +56,9 @@ export const Trains: React.FC<{
           ))}
         </header>
       </article>
-      <article className="h-full flex flex-col  shadow-lg rounded-br-2xl  bg-zinc-100 border-zinc-800">
+      <article className="h-full flex flex-col  shadow-lg rounded-br-2xl bg-zinc-100 border-zinc-800">
         <div className="flex items-center justify-center px-6 py-auto bg-gradient-to-r from-orange-400 to-orange-600 rounded-tr-2xl">
-          <h1 className="py-4 text-white text-6xl font-semibold">MNHTN</h1>
+          <h1 className="py-4 text-white text-8xl font-semibold">MNHTN</h1>
         </div>
 
         <header className="flex flex-col justify-end py-3 pl-4 pr-2 leading-tight w-full   ">
