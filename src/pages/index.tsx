@@ -131,9 +131,8 @@ export default function Home() {
                     {new Date(
                       new Date().getTime() + tramMinutes[i + 1] * 60000
                     ).toLocaleTimeString("en-US", {
-                      hour: "2-digit",
+                      timeStyle: "short",
                       hour12: true,
-                      minute: "2-digit",
                     })}
                   </h1>
                 ))}
@@ -164,7 +163,7 @@ export default function Home() {
           </article>
         </div>
 
-        <div className="grid grid-cols-3 gap-8 mt-2 mb-8">
+        <div className="grid grid-cols-3 gap-8 mb-4">
           <Time />
           <div className="  ">qr code</div>
         </div>
