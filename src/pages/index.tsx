@@ -41,6 +41,9 @@ export default function Home() {
           currMinutes
       )
       .filter((time: number) => time > 0)
+      .sort(function compare(a: number, b: number) {
+        return a - b;
+      })
     : [];
 
   let queensStops: Stop[] = [];
@@ -71,6 +74,16 @@ export default function Home() {
 
   queensStops.sort(sortTime);
   manhattanStops.sort(sortTime);
+  console.log(tramData
+    ? tramData.times
+      .map(
+        (time: any) =>
+          parseInt(time.split(":")[0]) * 60 +
+          parseInt(time.split(":")[1]) -
+          currMinutes
+      )
+      .filter((time: number) => time > 0)
+    : [])
 
   return (
     <main className={`min-h-screen  ${inter.className}`}>
@@ -124,7 +137,7 @@ export default function Home() {
                     {[...Array(3)].map((_, i) => (
                       <h1 className=" pr-2 py-2" key={i}>{new Date(new Date().getTime() + tramMinutes[i + 1] * 60000).toLocaleTimeString("en-US", {
                         hour: "2-digit",
-                        hour12: true, // Delete for 24-hour format
+                        hour12: true,
                         minute: "2-digit"
                       })}</h1>
                     ))}
@@ -157,77 +170,57 @@ export default function Home() {
           </article>
         </div>
 
+        <div className="grid grid-cols-3 gap-4 mt-2 mb-8">
+          <article className="h-full flex flex-col shadow-lg p-2 rounded-2xl tram-loop duration-200 text-white">
+            <div className="h-full px-4 rounded-t-2xl py-6">
+              <h1 className="text-white font-semibold font-inter ">
+                <FaTram size={65} />
+              </h1>
+            </div>
 
-
-        {/* <div className="grid grid-cols-3 gap-8 mt-2 mb-8">
-          <article className="h-full flex  items-center justify-center  shadow-lg p-2 rounded-2xl tram-loop duration-200 text-white">
-            <header className="grid grid-cols-2 px-4 items-center justify-center leading-tight w-full rounded-b-2xl ">
-              <div className="text-4xl font-semibold flex flex-col items-center">
-                <div className="h-full px-4 flex items-start  justify-start rounded-t-2xl py-6">
-                  <h1 className="text-white font-semibold font-inter ">
-                    <FaTram size={65} />
-                  </h1>
-                </div>
-                <h1 className=" pr-2 py-2">9:12 PM</h1>
-                <h1 className=" pr-2 py-2">10:21 PM</h1>
-              </div>
-              <div className="flex items-center justify-center">
-                <div className="flex flex-col -ml-6  items-center items px-2 ">
-                  <div className=" px-7 flex flex-col justify-center items-center ">
+            <header className="flex flex-col px-4 items-start justify-center leading-tight w-full rounded-b-2xl ">
+              <div className="pb-6">
+                <div className="flex items-center items px-2 py-2 ">
+                  <div className="mr-auto border-r-2 px-7 flex flex-col justify-center items-center border-r-zinc-300">
                     <h1 className="text-9xl font-bold">{tramMinutes[0]}</h1>
-                    <h1 className="text-5xl ">min</h1>
+                    <h1 className="text-5xl mb-4">{`minute${tramMinutes[0] !== 1 ? 's' : ''}`}</h1>
                   </div>
+                  {/* <div className="ml-8 text-4xl text-right font-semibold flex flex-col items-end justify-center">
+                    {[...Array(2)].map((_, i) => (
+                      <h1 className=" pr-2 py-2" key={i}>{new Date(new Date().getTime() + tramMinutes[i + 1] * 60000).toLocaleTimeString("en-US", {
+                        hour: "2-digit",
+                        hour12: true,
+                        minute: "2-digit"
+                      })}</h1>
+                    ))}
+                  </div> */}
                 </div>
               </div>
             </header>
           </article>
-
-          <article className="h-full items-center justify-center  shadow-lg p-2 rounded-2xl ferry-loop duration-200 text-white">
-            <div className=" px-4 f rounded-t-2xl py-6">
+          <article className="h-full flex flex-col shadow-lg p-2 rounded-2xl ferry-loop duration-200 text-white">
+            <div className="h-full px-4 rounded-t-2xl py-6">
               <h1 className="text-white font-semibold font-inter ">
                 <MdDirectionsBoat size={65} />
               </h1>
             </div>
-            <header className="grid grid-cols-2 px-4 items-center justify-center leading-tight w-full rounded-b-2xl ">
-              <div className="text-4xl font-semibold flex flex-col items-center">
-                <h1 className=" pr-2 py-2">9:12 PM</h1>
-                <h1 className=" pr-2 py-2">10:21 PM</h1>
-              </div>
-              <div className="flex items-center justify-center">
-                <div className="flex flex-col -ml-6  items-center items px-2 ">
-                  <div className=" px-7 flex flex-col justify-center items-center ">
-                    <h1 className="text-9xl font-bold">{tramMinutes[0]}</h1>
-                    <h1 className="text-5xl ">min</h1>
+
+            <header className="flex flex-col px-4 items-start justify-center leading-tight w-full rounded-b-2xl ">
+              <div className="pb-6">
+                <div className="flex items-center items px-2 py-2 ">
+                  <div className="mr-auto border-r-2 flex flex-col justify-center items-center px-7 border-r-zinc-300">
+                    <h1 className="text-9xl font-bold">9</h1>
+                    <h1 className="text-5xl mb-4">minutes</h1>
+                  </div>
+                  <div className="ml-8 text-4xl text-right font-semibold flex flex-col items-end justify-center">
+                    <h1 className=" pr-2 py-2">4:25 AM</h1>
+                    <h1 className=" pr-2 py-2">11:55 AM</h1>
                   </div>
                 </div>
               </div>
             </header>
           </article>
-
-
-          <article className="h-full items-center justify-center  shadow-lg p-2 rounded-2xl ferry-loop duration-200 text-white">
-            <div className=" px-4 f rounded-t-2xl pt-4">
-              <h1 className="text-white mb-2 font-semibold font-inter ">
-                <MdDirectionsBoat size={55} />
-              </h1>
-            </div>
-            <header className="grid grid-cols-2 px-4 items-center justify-center leading-tight w-full rounded-b-2xl ">
-
-              <div className="flex items-center justify-center">
-                <div className="flex flex-col -ml-6  items-center items px-2 ">
-                  <div className=" px-7 flex flex-col justify-center items-center ">
-                    <h1 className="text-9xl font-bold">{tramMinutes[0]}</h1>
-                    <h1 className="text-5xl ">min</h1>
-                  </div>
-                </div>
-              </div>
-              <div className="text-4xl font-semibold flex flex-col items-center">
-                <h1 className=" pr-2 py-2">9:12 PM</h1>
-                <h1 className=" pr-2 py-2">10:21 PM</h1>
-              </div>
-            </header>
-          </article>
-        </div> */}
+        </div>
       </div>
     </main>
   );
