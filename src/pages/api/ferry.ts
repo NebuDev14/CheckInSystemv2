@@ -51,6 +51,10 @@ export default async function handler(
     })
   })
 
+  times.sort(function compare(a, b) {
+    return (parseInt(a.time.split(":")[0])*60 + parseInt(a.time.split(":")[1])) - (parseInt(b.time.split(":")[0])*60 + parseInt(b.time.split(":")[1]))
+  })
+
   /* --- REAL TIME ---- */
 
   /* Fetch real time updates for ferry */
