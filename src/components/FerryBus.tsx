@@ -28,39 +28,49 @@ export const FerryBus: React.FC = () => {
 
   return (
     <article className="h-full flex col-span-2 flex-col shadow-lg p-2 rounded-2xl ferry-loop duration-200 text-white">
-      <div className="px-4 rounded-t-2xl pt-6 pb-10">
-        <h1 className="text-white font-semibold font-inter ">
+      <div className="px-4 rounded-t-2xl pt-6 pb-12">
+        <div className="text-white flex items-center justify-start font-semibold font-inter ">
           <MdDirectionsBoat size={65} />
-        </h1>
+        </div>
       </div>
 
       <header className="flex flex-col items-center justify-center leading-tight w-full rounded-b-2xl ">
-        <div className="pb-6">
-          <div className="flex items-center justify-center items py-2 ">
-            <div className="mr-auto flex flex-col justify-center items-center px-12 border-r-2 border-r-zinc-300">
-              <h1 className="text-9xl font-bold">
-                {" "}
-                {ferryMinutes[0] > 59
-                  ? (ferryMinutes[0] / 60).toFixed(0)
-                  : ferryMinutes[0]}
-              </h1>
-              <h1 className="text-5xl ">
-                {" "}
-                {ferryMinutes[0] > 59
-                  ? `hour${ferryMinutes[0] !== "1" ? "s" : ""}`
-                  : `minute${ferryMinutes[0] !== 1 ? "s" : ""}`}
-              </h1>
-            </div>
-            <div className="text-5xl px-12 text-right  flex flex-col items-end justify-center">
-              {[...Array(2)].map((_, i) => (
-                <h1 className=" py-2" key={i}>
-                  {new Date(
-                    new Date().getTime() + ferryMinutes[i + 1] * 60000
-                  ).toLocaleTimeString("en-US", {
-                    timeStyle: "short",
-                    hour12: true,
-                  })}
+        <div className="pb-6 ">
+          <div className="grid grid-cols-3 items-center justify-center py-2 ">
+            <div>
+              <div className="mr-auto flex flex-col justify-center items-center ">
+                <h1 className="text-9xl font-bold">
+                  {" "}
+                  {ferryMinutes[0] > 59
+                    ? (ferryMinutes[0] / 60).toFixed(0)
+                    : ferryMinutes[0]}
                 </h1>
+                <h1 className="text-5xl mb-8">
+                  {" "}
+                  {ferryMinutes[0] > 59
+                    ? `hour${ferryMinutes[0] !== "1" ? "s" : ""}`
+                    : `minute${ferryMinutes[0] !== 1 ? "s" : ""}`}
+                </h1>
+                <h1 className="text-3xl px-3 py-2 bg-cyan-600 rounded-lg font-normal">
+                  {ferryData?.at(0).destination}
+                </h1>
+              </div>
+            </div>
+            <div className="text-3xl text-right col-span-2 flex flex-col items-end justify-center">
+              {[...Array(2)].map((_, i) => (
+                <div className=" flex items-center justify-center py-2" key={i}>
+                  <h1 className="mr-4 px-3 rounded-lg bg-cyan-600 py-2">
+                    {ferryData?.at(i + 1).destination}
+                  </h1>
+                  <h1>
+                    {new Date(
+                      new Date().getTime() + ferryMinutes?.at(i + 1) * 60000
+                    ).toLocaleTimeString("en-US", {
+                      timeStyle: "short",
+                      hour12: true,
+                    })}
+                  </h1>
+                </div>
               ))}
             </div>
           </div>

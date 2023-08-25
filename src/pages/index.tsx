@@ -127,7 +127,7 @@ export default function Home() {
             </div>
 
             <header className="flex flex-col px-4 items-end justify-center leading-tight w-full rounded-b-2xl">
-              <div className=" text-5xl text-right font-semibold flex flex-col px-2 py-2 pb-6">
+              <div className=" text-5xl text-right flex flex-col px-2 py-2 pb-6">
                 {[...Array(2)].map((_, i) => (
                   <h1 className=" pr-2 py-2" key={i}>
                     {new Date(
@@ -150,7 +150,7 @@ export default function Home() {
           <div className="flex-col col-span-6 text-white text-4xl flex bg-gradient-to-br pt-6 pb-8 rounded-2xl from-green-500 to-cyan-600 items-center justify-center">
             <h1></h1>
           </div>
-          <div className="flex-col col-span-4 flex bg-gradient-to-br pt-6 pb-8 rounded-2xl from-red-500 to-pink-600 items-center justify-center">
+          <div className="flex-col col-span-4 flex bg-gradient-to-br pt-6 pb-8 rounded-2xl from-orange-400 to-yellow-500 items-center justify-center">
             <Image
               src={`/visitor.svg`}
               alt="qr code"
