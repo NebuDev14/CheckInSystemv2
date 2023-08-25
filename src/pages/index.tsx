@@ -109,9 +109,7 @@ export default function Home() {
         <div className="grid grid-cols-3 gap-6 mt-2 mb-8">
           <article className="h-full flex flex-col shadow-lg p-2 rounded-2xl tram-loop duration-200 text-white">
             <div className="h-full flex p-6 pr-0 pb-0 rounded-t-2xl">
-              <h1 className="text-white mr-auto font-semibold font-inter ">
                 <FaTram size={65} />
-              </h1>
               <div className=" px-7 flex flex-col justify-center items-end ">
                 <h1 className="text-9xl font-bold">
                   {tramMinutes[0] > 59
