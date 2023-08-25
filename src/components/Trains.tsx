@@ -11,11 +11,11 @@ export const Trains: React.FC<{
   return (
     <div className="grid grid-cols-2 gap-6 mb-4 mt-2">
       <article className="h-full flex flex-col  shadow-lg rounded-2xl bg-zinc-100 border-zinc-800">
-        <div className="flex items-center justify-center px-6 py-auto bg-gradient-to-r from-orange-400 to-orange-600 rounded-t-2xl">
+        <div className="flex items-center justify-center px-6 py-auto bg-orange-500 rounded-t-2xl">
           <h1 className="py-4 text-white text-8xl font-semibold">QNS</h1>
         </div>
 
-        <header className="flex flex-col items-left justify-center h-full py-3 pl-4 pr-2 leading-tight w-full   ">
+        <header className="flex flex-col items-left justify-center h-full py-3 pl-4 pr-2 leading-tight w-full">
           <div className="flex items-center justify-center flex-col mb-12">
             <h1 className="font-semibold text-[22rem]">{nextQueensTime}</h1>
             <h1 className="text-7xl ">{nextQueensTime ? `minute${nextQueensTime !== "1" ? "s" : ""
@@ -41,11 +41,11 @@ export const Trains: React.FC<{
         </header>
       </article>
       <article className="h-full flex flex-col  shadow-lg rounded-2xl bg-zinc-100 border-zinc-800">
-        <div className="flex items-center justify-center px-6 py-auto bg-gradient-to-r from-orange-400 to-orange-600 rounded-t-2xl">
+        <div className="flex items-center justify-center px-6 py-auto bg-orange-500 rounded-t-2xl">
           <h1 className="py-4 text-white text-8xl font-semibold">MHTN</h1>
         </div>
 
-        <header className=" h-full py-3 pl-4 pr-2 leading-tight w-full   ">
+        <header className="flex flex-col items-left justify-center h-full py-3 pl-4 pr-2 leading-tight w-full">
           <div className="flex items-center justify-center flex-col mb-12">
             <h1 className="font-semibold text-[22rem]">{nextManhattanTime}</h1>
             <h1 className="text-7xl ">{nextManhattanTime ? `minute${nextManhattanTime !== "1" ? "s" : ""

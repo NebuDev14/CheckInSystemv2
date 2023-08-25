@@ -56,13 +56,17 @@ export default async function handler(
   for (let i = 0; i < allEntities?.entity.length; i++) {
     for (let j = 0; j < allEntities?.entity[i].tripUpdate?.stopTimeUpdate?.length; j++) {
       const currentTripUpdate: TripUpdate = allEntities?.entity[i].tripUpdate;
+      const stop = currentTripUpdate.stopTimeUpdate.filter(update => update.stopId === stopId);
 
-      if (currentTripUpdate.stopTimeUpdate[j].stopId === stopId) allRealTimeRaw.push({
+      if (currentTripUpdate.stopTimeUpdate[j].stopId === stopId && stop.length !== 0) allRealTimeRaw.push({
         tripId: currentTripUpdate.trip.tripId,
-        arrival: currentTripUpdate.stopTimeUpdate.filter(update => update.stopId === stopId)[0].arrival
+        arrival: stop[0].arrival
       })
+
+      console.log(currentTripUpdate.stopTimeUpdate[j])
     }
   }
 
-  res.status(200).json(allRealTimeRaw)
+
+  res.status(200).json(allEntities)
 }
