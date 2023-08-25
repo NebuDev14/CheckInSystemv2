@@ -71,7 +71,7 @@ export default function Home() {
   queensStops.sort(sortTime);
   manhattanStops.sort(sortTime);
 
-  
+
 
   return (
     <main className={`min-h-screen  ${inter.className}`}>
@@ -150,7 +150,7 @@ export default function Home() {
           <div className="flex-col col-span-6 text-white text-4xl flex bg-gradient-to-br pt-6 pb-8 rounded-2xl from-green-500 to-cyan-600 items-center justify-center">
             <h1></h1>
           </div>
-          <div className="flex-col col-span-4 flex bg-gradient-to-br pt-6 pb-8 rounded-2xl from-orange-400 to-yellow-500 items-center justify-center">
+          <div className="flex-col col-span-4 flex bg-gradient-to-t pt-6 pb-8 rounded-2xl from-orange-400 to-yellow-500 items-center justify-center">
             <Image
               src={`/visitor.svg`}
               alt="qr code"
@@ -165,78 +165,6 @@ export default function Home() {
 
         </div>
 
-
-        {/* <div className="grid grid-cols-3 gap-4 mt-2 mb-8">
-          <article className="h-full flex flex-col shadow-lg p-2 rounded-2xl tram-loop duration-200 text-white">
-            <div className="h-full flex p-6 pr-0 pb-0 rounded-t-2xl">
-              <h1 className="text-white mr-auto font-semibold font-inter ">
-                <FaTram size={65} />
-              </h1>
-              <div className=" px-7 flex flex-col justify-center items-end ">
-                <h1 className="text-9xl font-bold">{tramMinutes[0]}</h1>
-                <h1 className="text-5xl mb-4">{`minute${tramMinutes[0] !== 1 ? 's' : ''}`}</h1>
-              </div>
-            </div>
-
-            <header className="flex flex-col px-4 items-end justify-center leading-tight w-full rounded-b-2xl">
-              <div className=" text-5xl text-right font-semibold flex flex-col px-2 py-2 pb-6">
-                {[...Array(2)].map((_, i) => (
-                  <h1 className=" pr-2 py-2" key={i}>{new Date(new Date().getTime() + tramMinutes[i + 1] * 60000).toLocaleTimeString("en-US", {
-                    hour: "2-digit",
-                    hour12: true,
-                    minute: "2-digit"
-                  })}</h1>
-                ))}
-              </div>
-            </header>
-          </article>
-          <article className="h-full flex flex-col shadow-lg p-2 rounded-2xl ferry-loop duration-200 text-white">
-            <div className="h-full flex p-6 pr-0 pb-0 rounded-t-2xl">
-              <h1 className="text-white mr-auto font-semibold font-inter ">
-                <MdDirectionsBoat size={65} />
-              </h1>
-              <div className=" px-7 flex flex-col justify-center items-end ">
-                <h1 className="text-9xl font-bold">9</h1>
-                <h1 className="text-5xl mb-4">{`minute${tramMinutes[0] !== 1 ? 's' : ''}`}</h1>
-              </div>
-            </div>
-
-            <header className="flex flex-col px-4 items-end justify-center leading-tight w-full rounded-b-2xl">
-              <div className=" text-5xl text-right font-semibold flex flex-col px-2 py-2 pb-6">
-                {[...Array(2)].map((_, i) => (
-                  <h1 className=" pr-2 py-2" key={i}>{new Date(new Date().getTime() + tramMinutes[i + 1] * 60000).toLocaleTimeString("en-US", {
-                    hour: "2-digit",
-                    hour12: true,
-                    minute: "2-digit"
-                  })}</h1>
-                ))}
-              </div>
-            </header>
-          </article>
-          <article className="h-full flex flex-col shadow-lg p-2 rounded-2xl bg-gradient-to-br from-orange-400 to-orange-500 duration-200 text-white">
-            <div className="h-full flex p-6 pr-0 pb-0 rounded-t-2xl">
-              <h1 className="text-white mr-auto font-semibold font-inter ">
-                <FaBus size={65} />
-              </h1>
-              <div className=" px-7 flex flex-col justify-center items-end ">
-                <h1 className="text-9xl font-bold">3</h1>
-                <h1 className="text-5xl mb-4">{`minute${tramMinutes[0] !== 1 ? 's' : ''}`}</h1>
-              </div>
-            </div>
-
-            <header className="flex flex-col px-4 items-end justify-center leading-tight w-full rounded-b-2xl">
-              <div className=" text-5xl text-right font-semibold flex flex-col px-2 py-2 pb-6">
-                {[...Array(2)].map((_, i) => (
-                  <h1 className=" pr-2 py-2" key={i}>{new Date(new Date().getTime() + tramMinutes[i + 1] * 60000).toLocaleTimeString("en-US", {
-                    hour: "2-digit",
-                    hour12: true,
-                    minute: "2-digit"
-                  })}</h1>
-                ))}
-              </div>
-            </header>
-          </article>
-        </div> */}
       </div>
     </main>
   );

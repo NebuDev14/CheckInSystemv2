@@ -14,16 +14,16 @@ export const FerryBus: React.FC = () => {
   const ferryMinutes =
     ferryData && !isLoading
       ? ferryData
-          .map(
-            (stop: any) =>
-              parseInt(stop.time.split(":")[0]) * 60 +
-              parseInt(stop.time.split(":")[1]) -
-              currMinutes
-          )
-          .filter((time: number) => time > 0)
-          .sort(function compare(a: number, b: number) {
-            return a - b;
-          })
+        .map(
+          (stop: any) =>
+            parseInt(stop.time.split(":")[0]) * 60 +
+            parseInt(stop.time.split(":")[1]) -
+            currMinutes
+        )
+        .filter((time: number) => time > 0)
+        .sort(function compare(a: number, b: number) {
+          return a - b;
+        })
       : [];
 
   return (
@@ -59,16 +59,18 @@ export const FerryBus: React.FC = () => {
             <div className="text-3xl text-right col-span-2 flex flex-col items-end justify-center">
               {[...Array(2)].map((_, i) => (
                 <div className=" flex items-center justify-center py-2" key={i}>
-                  <h1 className="mr-4 px-3 rounded-lg bg-cyan-600 py-2">
-                    {ferryData?.at(i + 1).destination}
-                  </h1>
-                  <h1>
+
+                  <h1 className="font-semibold">
                     {new Date(
                       new Date().getTime() + ferryMinutes?.at(i + 1) * 60000
                     ).toLocaleTimeString("en-US", {
                       timeStyle: "short",
                       hour12: true,
                     })}
+                  </h1>
+
+                  <h1 className="ml-6 px-3 rounded-lg bg-cyan-600 py-2">
+                    {ferryData?.at(i + 1).destination}
                   </h1>
                 </div>
               ))}

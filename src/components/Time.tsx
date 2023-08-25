@@ -43,11 +43,11 @@ export const Time: React.FC = () => {
   );
 
   return (
-    <div className=" py-6 col-span-2  flex flex-col items-center justify-center rounded-2xl bg-gradient-to-b from-black to-purple-950 text-white h-full">
+    <div className=" py-6 col-span-2  flex flex-col items-center justify-center rounded-2xl bg-gradient-to-b from-blue-500 to-purple-800 text-white h-full">
       <article className="h-full flex items-center flex-col justify-center shadow-lg p-2 rounded-2xl duration-200 text-white">
         <header className="flex flex-col items-center justify-center leading-tight w-full rounded-b-2xl ">
           <div className="flex flex-col items-center justify-center px-2">
-            
+
             <div className="flex flex-col items-center justify-center">
               {/* <h1 className=" text-4xl text-center mb-1">{data?.at(0).desc}</h1> */}
               {getIcon(data?.at(0).condition, true)}
