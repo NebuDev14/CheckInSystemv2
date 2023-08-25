@@ -6,22 +6,19 @@ const fs = require('fs');
 
 /* --- TYPES --- */
 
-/* Type delcaration for a ferry that is approaching some stop */
-type Incoming = {
-  time: string;
-  destination: string;
-}
 
-/* Type delcaration for a ferry stop that contains ferrys going to East 90th St and Wall st/Pier 11 */
-type Stop = {
-  wallSt: Incoming[];
-  east90: Incoming[];
+enum StopType {
+  SCHEDULED,
+  REALTIME
 }
 
 /* Type declaration for return type data, housing the scheduled stops and realtime stops from NYC Ferry GTFS */
 type Data = {
-  scheduled: Stop[];
-  realtime: Stop[];
+  incoming: {
+    time: string;
+    destination: string;
+    stopType: StopType;
+  }[];
 }
 
 export default async function handler(
@@ -30,7 +27,7 @@ export default async function handler(
 ) {
 
   /* Unique Stop ID number for Roosevelt Island Ferry */
-  const stopId = "25"
+  const stopId = "20"
 
   /* --- SCHEDULED TIME ---- */
 
@@ -58,15 +55,18 @@ export default async function handler(
       const currentTripUpdate: TripUpdate = allEntities?.entity[i].tripUpdate;
       const stop = currentTripUpdate.stopTimeUpdate.filter(update => update.stopId === stopId);
 
-      if (currentTripUpdate.stopTimeUpdate[j].stopId === stopId && stop.length !== 0) allRealTimeRaw.push({
-        tripId: currentTripUpdate.trip.tripId,
-        arrival: stop[0].arrival
-      })
+      if (currentTripUpdate.stopTimeUpdate[j].stopId === stopId ) {
 
-      console.log(currentTripUpdate.stopTimeUpdate[j])
+        for(let x = 0; x < stop.length; x++) {
+          if(stop[x].arrival) allRealTimeRaw.push({
+            tripId: currentTripUpdate.trip.tripId,
+            arrival: stop[x].arrival
+          })
+        }
+      }
     }
   }
 
 
-  res.status(200).json(allEntities)
+  res.status(200).json(allRealTimeRaw)
 }

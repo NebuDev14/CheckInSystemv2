@@ -71,6 +71,8 @@ export default function Home() {
   queensStops.sort(sortTime);
   manhattanStops.sort(sortTime);
 
+  
+
   return (
     <main className={`min-h-screen  ${inter.className}`}>
       <div className="bg-gradient-to-br from-zinc-900 to-zinc-700 flex items-center justify-center py-6">
@@ -143,10 +145,10 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-12 gap-6 mb-4">
-          
+
           <Time />
           <div className="flex-col col-span-6 text-white text-4xl flex bg-gradient-to-br pt-6 pb-8 rounded-2xl from-green-500 to-cyan-600 items-center justify-center">
-            <h1>192.168.1.64</h1>
+            <h1></h1>
           </div>
           <div className="flex-col col-span-4 flex bg-gradient-to-br pt-6 pb-8 rounded-2xl from-red-500 to-pink-600 items-center justify-center">
             <Image
@@ -160,9 +162,9 @@ export default function Home() {
               Scan Check In
             </h1>
           </div>
-          
+
         </div>
-        
+
 
         {/* <div className="grid grid-cols-3 gap-4 mt-2 mb-8">
           <article className="h-full flex flex-col shadow-lg p-2 rounded-2xl tram-loop duration-200 text-white">
