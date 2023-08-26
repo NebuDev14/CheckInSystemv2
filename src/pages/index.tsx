@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import { FaTram, FaBus } from "react-icons/fa"
+import { FaTram, FaBus } from "react-icons/fa";
 import { Trains } from "@/components/Trains";
 import useSWR from "swr";
 import { Time } from "@/components/Time";
@@ -71,8 +71,6 @@ export default function Home() {
   queensStops.sort(sortTime);
   manhattanStops.sort(sortTime);
 
-
-
   return (
     <main className={`min-h-screen  ${inter.className}`}>
       <div className="bg-gradient-to-br from-zinc-900 to-zinc-700 flex items-center justify-center py-6">
@@ -109,7 +107,7 @@ export default function Home() {
         <div className="grid grid-cols-3 gap-6 mt-2 mb-8">
           <article className="h-full flex flex-col shadow-lg p-2 rounded-2xl tram-loop duration-200 text-white">
             <div className="h-full flex p-6 pr-0 pb-0 rounded-t-2xl">
-                <FaTram size={65} />
+              <FaTram size={65} />
               <div className=" px-7 flex flex-col justify-center items-end ">
                 <h1 className="text-9xl font-bold">
                   {tramMinutes[0] > 59
@@ -128,12 +126,9 @@ export default function Home() {
               <div className=" text-5xl text-right flex flex-col px-2 py-2 pb-6">
                 {[...Array(2)].map((_, i) => (
                   <h1 className=" pr-2 py-2" key={i}>
-                    {new Date(
-                      new Date().getTime() + tramMinutes[i + 1] * 60000
-                    ).toLocaleTimeString("en-US", {
-                      timeStyle: "short",
-                      hour12: true,
-                    })}
+                    {tramMinutes?.at(i + 1) > 59
+                      ? ""
+                      : tramMinutes?.at(i + 1) + " min"}
                   </h1>
                 ))}
               </div>
@@ -143,7 +138,6 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-12 gap-6 mb-4">
-
           <Time />
           <div className="flex-col col-span-6 text-white text-4xl flex bg-gradient-to-br pt-6 pb-8 rounded-2xl from-green-500 to-cyan-600 items-center justify-center">
             <h1></h1>
@@ -160,9 +154,7 @@ export default function Home() {
               Scan Check In
             </h1>
           </div>
-
         </div>
-
       </div>
     </main>
   );

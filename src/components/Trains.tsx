@@ -9,7 +9,7 @@ export const Trains: React.FC<{
 }> = ({ queens, manhattan, nextQueensTime, nextManhattanTime }) => {
   
   return (
-    <div className="grid grid-cols-2 gap-6 mb-4 mt-2">
+    <div className="grid grid-cols-2 gap-6 mb-4 mt-2 ">
       <article className="h-full flex flex-col  shadow-lg rounded-2xl bg-zinc-100 border-zinc-800">
         <div className="flex items-center justify-center px-6 py-auto bg-orange-500 rounded-t-2xl">
           <h1 className="py-4 text-white text-8xl font-semibold">QNS</h1>

@@ -2,39 +2,30 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 
 require("dotenv").config()
 
-export default async function handler(
-    req: NextApiRequest,
-    res: NextApiResponse
-) {
-    const data = await fetch(`https://bustime.mta.info/api/siri/vehicle-monitoring.json?key=${process.env.BUS_API}&VehicleMonitoringDetailLevel=calls&LineRef=Q102`)
-    .then(res => res.json())
-
-    res.status(200).json(data.Siri.ServiceDelivery.VehicleMonitoringDelivery[0].VehicleActivity.filter((bus: any) => bus.MonitoredVehicleJourney.DestinationName.includes("ASTORIA")))
+type Data = {
+  destination: string;
+  time: Date;
+  distances: {
+    PresentableDistance: string;
+    DistanceFromCall: number;
+        "StopsFromCall": number;
+        "CallDistanceAlongRoute": 144.18
+  }
 }
-
-
-/**
- * import type { NextApiRequest, NextApiResponse } from 'next'
-
-require("dotenv").config()
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const rawData = await fetch(`http://bustime.mta.info/api/siri/stop-monitoring.json?key=${process.env.BUS_API}&MonitoringRef=450146&?OperatorRef=MTA&?MinimumStopVisitsPerLine=3?DirectionRef=1`)
+  const rawData = await fetch(`http://bustime.mta.info/api/siri/stop-monitoring.json?key=${process.env.BUS_API}&MonitoringRef=450143&?MinimumStopVisitsPerLine=3`)
     .then(res => res.json())
 
-  const filtered = rawData.Siri.ServiceDelivery.StopMonitoringDelivery[0].MonitoredStopVisit?.filter((stop: any) => stop.MonitoredVehicleJourney.DestinationName.includes("ASTORIA")).map((stop: any) => {
-    return {
-      destination: stop.DestinationName,
-      time: stop.MonitoredCall.AimedArrivalTime,
-      distance: stop.MonitoredCall.Extensions.PresentableDistance
-    }
+  const filtered = rawData.Siri.ServiceDelivery.StopMonitoringDelivery[0].MonitoredStopVisit?.at(0).MonitoredVehicleJourney
 
+  res.status(200).json({
+    destination: filtered?.DestinationName,
+    time: new Date(filtered?.MonitoredCall.AimedArrivalTime as string),
+    distances: filtered?.MonitoredCall.Extensions.Distances
   })
-
-  res.status(200).json(rawData)
 }
 
- */
