@@ -32,11 +32,12 @@ export const FerryBus: React.FC = () => {
               parseInt(stop.time.split(":")[1]) -
               currMinutes
           )
-          .filter((time: number) => time > 0)
           .sort(function compare(a: number, b: number) {
             return a - b;
           })
       : [];
+
+  console.log(ferryMinutes)
 
   return (
     <>
