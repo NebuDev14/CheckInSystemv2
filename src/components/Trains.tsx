@@ -15,7 +15,7 @@ export const Trains: React.FC<{
           <h1 className="py-4 text-white text-8xl font-semibold">QNS</h1>
         </div>
 
-        <header className={`flex flex-col items-left justify-center h-full  pl-4 pr-2 leading-tight w-full ${queens.length === 0 && manhattan.length === 0 ? "py-56" : "py-3"}`}>
+        <header className={`flex flex-col items-left justify-center h-full  pl-4 pr-2 leading-tight w-full ${queens.length === 0 && manhattan.length === 0 ? " py-72" : "py-3"}`}>
           <div className="flex items-center justify-center flex-col mb-12">
             <h1 className="font-semibold text-[22rem]">{nextQueensTime}</h1>
             <h1 className="text-7xl ">{nextQueensTime ? `minute${nextQueensTime !== "1" ? "s" : ""

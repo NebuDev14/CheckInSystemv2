@@ -4,7 +4,8 @@ import { FaTram, FaBus } from "react-icons/fa";
 import { Trains } from "@/components/Trains";
 import useSWR from "swr";
 import { Time } from "@/components/Time";
-import { FerryBus } from "@/components/FerryBus";
+import { Ferry } from "@/components/Ferry";
+import { Bus } from "@/components/Bus";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -134,7 +135,8 @@ export default function Home() {
               </div>
             </header>
           </article>
-          <FerryBus />
+          <Ferry />
+          <Bus />
         </div>
 
         <div className="grid grid-cols-12 gap-6 mb-4">
