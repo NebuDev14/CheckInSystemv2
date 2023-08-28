@@ -8,14 +8,14 @@ type Data = {
   distances: {
     PresentableDistance: string;
     DistanceFromCall: number;
-        "StopsFromCall": number;
-        "CallDistanceAlongRoute": 144.18
+    StopsFromCall: number;
+    CallDistanceAlongRoute: number;
   }
 }
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse<Data>
 ) {
   const rawData = await fetch(`http://bustime.mta.info/api/siri/stop-monitoring.json?key=${process.env.BUS_API}&MonitoringRef=450143&?MinimumStopVisitsPerLine=3`)
     .then(res => res.json())

@@ -1,4 +1,4 @@
-import { MdDirectionsBoat } from "react-icons/md";
+import { MdDirectionsBoat, MdDirectionsBus } from "react-icons/md";
 import useSWR from "swr";
 
 export const Ferry: React.FC = () => {
@@ -12,7 +12,6 @@ export const Ferry: React.FC = () => {
       refreshInterval: 60000,
     }
   );
-
 
   const currMinutes = new Date().getHours() * 60 + new Date().getMinutes();
   const ferryMinutes =
@@ -29,8 +28,6 @@ export const Ferry: React.FC = () => {
             return a - b;
           })
       : [];
-
-  console.log(ferryMinutes);
 
   return (
     <>
