@@ -21,7 +21,7 @@ export const Bus: React.FC = () => {
 
   return (
     <article className="h-full flex flex-col shadow-lg p-2 rounded-2xl bg-gradient-to-br from-blue-600 to-purple-600 duration-200 text-white">
-      <div className="h-full flex p-6 pr-0 pb-0 rounded-t-2xl">
+      <div className="h-full flex p-6 pr-0 pb-0 pt-16 rounded-t-2xl">
         <MdDirectionsBus size={65} />
 
         <div className=" px-7 flex flex-col justify-start items-end ">
