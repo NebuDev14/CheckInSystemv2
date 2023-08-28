@@ -63,7 +63,7 @@ export const Trains: React.FC<{
                 />
               </div>
               <h1 className="-ml-6 col-span-5  text-3xl mr-4 text-left flex items-center justify-center">
-                {train.destination.length > 23 ? train.destination.slice(0, 12) + "..." : train.destination}
+                {train.destination.length > 17 ? train.destination.slice(0, 14) + "..." : train.destination}
               </h1>
               <h1 className="mr-6 col-span-2 text-5xl font-semibold flex items-end justify-end">
                 {((train.time.getTime() - (new Date().getTime())) / 1000 / 60).toFixed(0)}
