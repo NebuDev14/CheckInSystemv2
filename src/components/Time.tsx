@@ -43,8 +43,8 @@ export const Time: React.FC = () => {
   );
 
   return (
-    <div className=" py-6 col-span-2  flex flex-col items-center justify-center rounded-2xl bg-gradient-to-b from-purple-500 to-purple-700 text-white h-full">
-      <article className="h-full flex items-center flex-col justify-center shadow-lg p-2 rounded-2xl duration-200 text-white">
+    <div className=" py-6 col-span-2  flex flex-col items-center justify-center shadow-xl rounded-2xl bg-gradient-to-b from-purple-500 to-purple-700 text-white h-full">
+      <article className="h-full flex items-center flex-col justify-center  p-2 rounded-2xl duration-200 text-white">
         <header className="flex flex-col items-center justify-center leading-tight w-full rounded-b-2xl ">
           <div className="flex flex-col items-center justify-center px-2">
             <div className="flex flex-col items-center justify-center">
