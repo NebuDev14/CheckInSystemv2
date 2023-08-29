@@ -44,7 +44,7 @@ export const Ferry: React.FC = () => {
             .replace("St", "")}
         </div>
       </div>
-      <article className="flex flex-col shadow-lg p-2 pt-0 pl-0 ">
+      <article className="flex flex-col shadow-lg p-2 pt-0 px-0 ">
         <div className="h-full flex p-6 pr-0 pt-5 pb-0 rounded-t-2xl">
           <MdDirectionsBoat size={65} />
           <div className=" px-7 ml-auto flex flex-col justify-center items-end ">
@@ -71,12 +71,36 @@ export const Ferry: React.FC = () => {
           </div>
         </div>
 
-        <header className="flex flex-col pr-4 justify-center leading-tight w-full rounded-b-2xl">
-          <div className=" text-4xl text-right flex flex-col pr-2 pt-0 pb-6">
+        <header className="flex flex-col justify-center leading-tight w-full rounded-b-2xl">
+          <div className=" text-4xl text-right flex flex-col pt-0 pb-6">
             {[...Array(2)].map((_, i) => (
               <div className="flex my-2">
+                <div className="flex  mr-auto items-center justify-center">
+                  <h1
+                    className={`text-2xl py-2 px-3 rounded-r-lg mr-auto ${
+                      filtered
+                        ?.at(i + 1)
+                        ?.destination.replace("Wall St./", "")
+                        .replace("St", "") === "Pier 11"
+                        ? "bg-[#F55D5D] pr-6"
+                        : "bg-[#2BA84F]"
+                    }  `}
+                  >
+                    {filtered
+                      ?.at(i + 1)
+                      ?.destination.replace("Wall St./", "")
+                      .replace("St", "")
+                      .replace("th", "")}
+                  </h1>
+                </div>
+                <h1 className="py-2" key={i}>
+                  {convertTime(currMinutes, filtered?.at(i + 1)?.time) > 59
+                    ? ""
+                    : convertTime(currMinutes, filtered?.at(i + 1)?.time) +
+                      " min"}
+                </h1>
                 <h1
-                  className={`text-3xl py-2 px-3 rounded-r-lg mr-auto ${
+                  className={`text-3xl py-2 px-3 rounded-l-lg ml-4  ${
                     filtered
                       ?.at(i + 1)
                       ?.destination.replace("Wall St./", "")
@@ -84,18 +108,7 @@ export const Ferry: React.FC = () => {
                       ? "bg-[#F55D5D]"
                       : "bg-[#2BA84F]"
                   }  `}
-                >
-                  {filtered
-                    ?.at(i + 1)
-                    ?.destination.replace("Wall St./", "")
-                    .replace("St", "")}
-                </h1>
-                <h1 className="py-2" key={i}>
-                  {convertTime(currMinutes, filtered?.at(i + 1)?.time) > 59
-                    ? ""
-                    : convertTime(currMinutes, filtered?.at(i + 1)?.time) +
-                      " min"}
-                </h1>
+                />
               </div>
             ))}
           </div>

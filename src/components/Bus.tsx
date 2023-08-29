@@ -20,7 +20,7 @@ export const Bus: React.FC = () => {
     : undefined;
 
   return (
-    <article className="h-full flex flex-col shadow-lg p-2 pl-0 rounded-2xl bg-gradient-to-br bg-blue-600 duration-200 text-white  bg-slae">
+    <article className="h-full flex flex-col shadow-lg p-2 px-0 rounded-2xl bg-gradient-to-br bg-blue-600 duration-200 text-white ">
       <div className="h-full flex p-6 pr-0 pb-0 pt-16 rounded-t-2xl">
         <MdDirectionsBus size={65} />
 
@@ -39,8 +39,8 @@ export const Bus: React.FC = () => {
         </div>
       </div>
 
-      <header className="flex flex-col pr-4 justify-center leading-tight w-full rounded-b-2xl">
-        <div className="text-5xl text-right flex  pr-2 py-2 pb-6">
+      <header className="flex flex-col  justify-center leading-tight w-full rounded-b-2xl">
+        <div className="text-5xl text-right flex  py-2 pb-6">
           <h1 className="text-3xl py-2 px-3 rounded-r-lg bg-white text-black font-bold mr-auto">
             Q102
           </h1>
@@ -51,6 +51,7 @@ export const Bus: React.FC = () => {
                   .replace("away", "")
                   .replace("approaching", "at stop")}
           </h1>
+          <h1 className="text-3xl py-2 px-3 rounded-l-lg ml-4 bg-white" />
         </div>
       </header>
     </article>
