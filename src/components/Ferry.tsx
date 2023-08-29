@@ -35,7 +35,7 @@ export const Ferry: React.FC = () => {
               ?.destination.replace("Wall St./", "")
               .replace("St", "") === "Pier 11"
               ? "bg-[#F55D5D]"
-              : "bg-[#2BA84F]"
+              : "bg-[#56c847]"
           }`}
         >
           {filtered

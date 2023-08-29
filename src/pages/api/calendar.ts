@@ -16,6 +16,7 @@ export default async function handler(
     calendarId: "nycfirst.org_tj6mah4fu3tup7871n70mlva88@group.calendar.google.com",
     orderBy: "startTime",
     timeMin: `2023-${new Date().getMonth() + 1}-${new Date().getUTCDate()}T00:00:00Z`,
+    timeMax: `2023-${new Date().getMonth() + 1}-${new Date().getUTCDate()}T23:59:00Z`,
     maxResults: 10,
     singleEvents: true,
   }, (e, resp) => {

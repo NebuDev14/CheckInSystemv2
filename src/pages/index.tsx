@@ -6,6 +6,7 @@ import useSWR from "swr";
 import { Time } from "@/components/Time";
 import { Ferry } from "@/components/Ferry";
 import { Bus } from "@/components/Bus";
+import { Calendar } from "@/components/Calendar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -141,22 +142,20 @@ export default function Home() {
 
         <div className="grid grid-cols-12 gap-6 mb-4">
           <Time />
-          <div className=" col-span-6 text-white text-4xl rounded-2xl bg-slate-200 shadow-lg border-zinc-400 border  items-center justify-center">
-            <div className=" bg-red-500 rounded-t-2xl flex py-4 items-center justify-center">
-              <h1 className="text-6xl font-semibold">AUG</h1>
-            </div>
-          </div>
-          <div className="flex-col col-span-4 flex bg-orange-500 pt-6 pb-8 rounded-2xl  items-center justify-center">
-            <Image
-              src={`/visitor.svg`}
-              alt="qr code"
-              height={275}
-              width={275}
-              className="rounded-xl mb-8"
-            />
-            <h1 className="text-white text-center font-semibold font-openSans text-4xl">
+          <Calendar />
+          <div className="flex-col col-span-4  bg-white shadow-lg  pb-4 rounded-2xl  items-center justify-center">
+            <h1 className=" text-center mb-2 font-semibold font-openSans text-4xl py-3 text-white rounded-t-2xl bg-red-500">
               Scan Check In
             </h1>
+            <div className="flex items-center justify-center">
+              <Image
+                src={`/visitor.svg`}
+                alt="qr code"
+                height={275}
+                width={275}
+                className="rounded-xl"
+              />
+            </div>
           </div>
         </div>
       </div>
