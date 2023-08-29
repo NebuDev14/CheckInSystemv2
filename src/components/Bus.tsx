@@ -20,7 +20,7 @@ export const Bus: React.FC = () => {
     : undefined;
 
   return (
-    <article className="h-full flex flex-col shadow-lg p-2 rounded-2xl bg-gradient-to-br from-blue-600 to-purple-600 duration-200 text-white">
+    <article className="h-full flex flex-col shadow-lg p-2 pl-0 rounded-2xl bg-gradient-to-br from-blue-600 to-purple-600 duration-200 text-white">
       <div className="h-full flex p-6 pr-0 pb-0 pt-16 rounded-t-2xl">
         <MdDirectionsBus size={65} />
 
@@ -39,9 +39,9 @@ export const Bus: React.FC = () => {
         </div>
       </div>
 
-      <header className="flex flex-col px-4 items-end justify-center leading-tight w-full rounded-b-2xl">
-        <div className="text-5xl text-right flex  px-2 py-2 pb-6">
-          <h1 className="text-3xl py-2 px-3 rounded-lg bg-blue-600 font-bold">
+      <header className="flex flex-col pr-4 justify-center leading-tight w-full rounded-b-2xl">
+        <div className="text-5xl text-right flex  pr-2 py-2 pb-6">
+          <h1 className="text-3xl py-2 px-3 rounded-r-lg bg-blue-600 font-bold mr-auto">
             Q102
           </h1>
           <h1 className=" pr-2 py-2 ml-4 text-4xl">
