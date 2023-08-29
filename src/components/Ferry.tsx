@@ -26,23 +26,23 @@ export const Ferry: React.FC = () => {
   );
 
   return (
-    <div className="rounded-2xl bg-gradient-to-br from-cyan-600 to-cyan-500 duration-200 text-white">
+    <div className="rounded-2xl bg-cyan-500 duration-200 text-white">
       <div className="flex justify-end">
-      <div
-        className={` inline-flex rounded-tr-2xl rounded-bl-2xl ml-auto justify-end px-6 py-3 text-3xl font-semibold ${
-          filtered
+        <div
+          className={` inline-flex rounded-tr-2xl rounded-bl-2xl ml-auto justify-end px-6 py-3 text-3xl font-semibold ${
+            filtered
+              ?.at(0)
+              ?.destination.replace("Wall St./", "")
+              .replace("St", "") === "Pier 11"
+              ? "bg-[#F55D5D]"
+              : "bg-[#2BA84F]"
+          }`}
+        >
+          {filtered
             ?.at(0)
             ?.destination.replace("Wall St./", "")
-            .replace("St", "") === "Pier 11"
-            ? "bg-blue-600"
-            : " bg-violet-500"
-        }`}
-      >
-        {filtered
-          ?.at(0)
-          ?.destination.replace("Wall St./", "")
-          .replace("St", "")}
-      </div>
+            .replace("St", "")}
+        </div>
       </div>
       <article className="flex flex-col shadow-lg p-2 pt-0 pl-0 ">
         <div className="h-full flex p-6 pr-0 pt-5 pb-0 rounded-t-2xl">
@@ -81,9 +81,9 @@ export const Ferry: React.FC = () => {
                       ?.at(i + 1)
                       ?.destination.replace("Wall St./", "")
                       .replace("St", "") === "Pier 11"
-                      ? "bg-blue-600"
-                      : "bg-violet-500"
-                  }  font-bold`}
+                      ? "bg-[#F55D5D]"
+                      : "bg-[#2BA84F]"
+                  }  `}
                 >
                   {filtered
                     ?.at(i + 1)

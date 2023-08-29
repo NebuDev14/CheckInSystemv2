@@ -141,10 +141,12 @@ export default function Home() {
 
         <div className="grid grid-cols-12 gap-6 mb-4">
           <Time />
-          <div className="flex-col col-span-6 text-white text-4xl flex bg-gradient-to-br pt-6 pb-8 rounded-2xl from-green-500 to-cyan-600 items-center justify-center">
-            <h1></h1>
+          <div className=" col-span-6 text-white text-4xl rounded-2xl bg-slate-200 shadow-lg border-zinc-400 border  items-center justify-center">
+            <div className=" bg-red-500 rounded-t-2xl flex py-4 items-center justify-center">
+              <h1 className="text-6xl font-semibold">AUG</h1>
+            </div>
           </div>
-          <div className="flex-col col-span-4 flex bg-gradient-to-t pt-6 pb-8 rounded-2xl from-orange-400 to-yellow-500 items-center justify-center">
+          <div className="flex-col col-span-4 flex bg-orange-500 pt-6 pb-8 rounded-2xl  items-center justify-center">
             <Image
               src={`/visitor.svg`}
               alt="qr code"
