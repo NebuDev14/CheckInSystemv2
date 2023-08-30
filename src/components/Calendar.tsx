@@ -42,13 +42,15 @@ export const Calendar: React.FC = () => {
         {[...Array(3)].map((_, i) => (
           <div className="my-8">
             -{" "}
-            {new Date(new Date().getTime() + 3.6e6 * i).getHours()%12 + new Date(new Date().getTime() + 3.6e6 * i).toLocaleTimeString(
-              "en-US",
-              {
-                hour12: true,
-                timeStyle: "short",
-              }
-            ).slice(-2)}
+            {(new Date(new Date().getTime() + 3.6e6 * i).getHours() % 12 === 0
+              ? "12"
+              : new Date(new Date().getTime() + 3.6e6 * i).getHours() % 12) +
+              new Date(new Date().getTime() + 3.6e6 * i)
+                .toLocaleTimeString("en-US", {
+                  hour12: true,
+                  timeStyle: "short",
+                })
+                .slice(-2)}
           </div>
         ))}
       </div>
