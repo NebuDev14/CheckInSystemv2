@@ -26,7 +26,7 @@ export const Ferry: React.FC = () => {
   );
 
   return (
-    <div className="rounded-2xl bg-cyan-500 duration-200 text-white">
+    <div className="rounded-2xl shadow-lg bg-cyan-500 duration-200 text-white">
       <div className="flex justify-end">
         <div
           className={` inline-flex rounded-tr-2xl rounded-bl-2xl ml-auto justify-end px-6 py-3 text-3xl font-semibold ${
@@ -44,7 +44,7 @@ export const Ferry: React.FC = () => {
             .replace("St", "")}
         </div>
       </div>
-      <article className="flex flex-col shadow-lg p-2 pt-0 px-0 ">
+      <article className="flex flex-col  p-2 pt-0 px-0 ">
         <div className="h-full flex p-6 pr-0 pt-5 pb-0 rounded-t-2xl">
           <MdDirectionsBoat size={65} />
           <div className=" px-7 ml-auto flex flex-col justify-center items-end ">
