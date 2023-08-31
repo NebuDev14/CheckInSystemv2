@@ -23,7 +23,6 @@ export default async function handler(
     singleEvents: true,
   }, (e, resp) => {
 
-      console.log(`${new Date().getUTCFullYear()}-${new Date().getMonth() + 1}-${new Date().getUTCDate()}T23:59:00Z`)
     const data = resp?.data.items?.map((event: any) => {
       return {
         name: event.summary,
