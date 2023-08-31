@@ -34,8 +34,8 @@ export const Ferry: React.FC = () => {
               ?.at(0)
               ?.destination.replace("Wall St./", "")
               .replace("St", "") === "Pier 11"
-              ? "bg-[#F55D5D]"
-              : "bg-[#56c847]"
+              ? "bg-orange-400"
+              : "bg-orange-600"
           }`}
         >
           {filtered
@@ -82,8 +82,8 @@ export const Ferry: React.FC = () => {
                         ?.at(i + 1)
                         ?.destination.replace("Wall St./", "")
                         .replace("St", "") === "Pier 11"
-                        ? "bg-[#F55D5D] pr-6"
-                        : "bg-[#56c847]"
+                        ? "bg-orange-400 pr-6"
+                        : "bg-orange-600"
                     }  `}
                   >
                     {filtered
@@ -105,8 +105,8 @@ export const Ferry: React.FC = () => {
                       ?.at(i + 1)
                       ?.destination.replace("Wall St./", "")
                       .replace("St", "") === "Pier 11"
-                      ? "bg-[#F55D5D]"
-                      : "bg-[#56c847]"
+                      ? "bg-orange-400"
+                      : "bg-orange-600"
                   }  `}
                 />
               </div>

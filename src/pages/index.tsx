@@ -107,7 +107,7 @@ export default function Home() {
           }
         />
         <div className="grid grid-cols-3 gap-6 mt-2 mb-8">
-          <article className="h-full flex flex-col shadow-lg p-2 rounded-2xl bg-gradient-to-br from-red-600 to-red-500 duration-200 text-white">
+          <article className="h-full flex flex-col shadow-lg p-2 pr-0 rounded-2xl bg-gradient-to-br from-red-600 to-red-500 duration-200 text-white">
             <div className="h-full flex p-6 pr-0 pb-0 rounded-t-2xl pt-16">
               <FaTram size={65} />
               <div className=" px-7 flex flex-col justify-center items-end ">
@@ -143,8 +143,8 @@ export default function Home() {
         <div className="grid grid-cols-12 gap-6 mb-4">
           <Time />
           <Calendar />
-          <div className="flex-col col-span-4  bg-white shadow-lg  pb-4 rounded-2xl  items-center justify-center">
-            <h1 className=" text-center mb-2 font-semibold font-openSans text-4xl py-3 text-white rounded-t-2xl bg-red-500">
+          <div className="flex-col col-span-4 bg-white shadow-lg border-b-4 border-x-4 border-black rounded-2xl items-center justify-center">
+            <h1 className=" text-center mb-2 font-semibold font-openSans text-4xl py-3 border-t-4 border-black  text-white rounded-t-2xl bg-neutral-500">
               Scan Check In
             </h1>
             <div className="flex items-center justify-center">
@@ -153,7 +153,7 @@ export default function Home() {
                 alt="qr code"
                 height={275}
                 width={275}
-                className="rounded-xl"
+                className="rounded-2xl"
               />
             </div>
           </div>
