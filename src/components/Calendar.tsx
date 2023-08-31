@@ -18,25 +18,11 @@ export const Calendar: React.FC = () => {
   //  max-h-[23rem] overflow-y-hidden
   return (
     <div className="max-h-[23rem] overflow-y-hidden col-span-6 text-4xl text-black rounded-2xl pb-8  bg-white shadow-lg border-zinc-400 border  items-center justify-center">
-      {/* <h1 className="text-4xl text-red-500 ">
-        {dayName[new Date().getDay()].toUpperCase()}
-      </h1>
-      <h1 className="text-6xl mt-2 mb-4">{new Date().getUTCDate()}</h1> */}
       <div className="flex flex-col">
-        {/* {data?.map((event: any) => (
-          <div className="flex px-1 my-1">
-            <h1>
-              {new Date(event.date as string).toLocaleTimeString("en-US", {
-                hour12: true,
-                timeStyle: "short",
-              })}
-            </h1>
-          </div>
-        ))} */}
         <div className="text-4xl z-50 rounded-t-2xl bg-neutral-500 text-white py-3 flex items-center justify-center">
           <h1>No events.</h1>
         </div>
-        <div style={{ transform: `translateY(-${1550}px)` }}>
+        <div style={{ transform: `translateY(-${1520}px)` }}>
           <div
             className={`flex items-center justify-center px-4 text-red-500 relative z-50`}
             style={{
@@ -52,11 +38,11 @@ export const Calendar: React.FC = () => {
                 timeStyle: "short",
               })}
             </h1>
-            <hr className="  h-1 ml-2 bg-red-500  border-red-500 border-2 rounded-full p-2  " />
+            <hr className="  h-1 bg-red-500  border-red-500 border-2 rounded-full p-2  " />
             <hr className="w-full  h-1    bg-gray-100  border-red-500 border-2 rounded  dark:bg-gray-700" />
           </div>
           <div
-            className={`flex flex-col bg-cyan-400 rounded-xl items-start justify-start p-4 opacity-70 left-[7.70rem] h-[11.8rem] text-white absolute w-[23rem] z-40`}
+            className={`flex flex-col bg-violet-800 rounded-xl items-start justify-start p-4 opacity-60 left-[9rem] h-[11.8rem] text-white absolute w-[22rem] z-40`}
             style={{"top": `${4.75 + 6.75*15}rem`}}
           >
             <h1 className="opacity-100 text-3xl ">3:00 PM - 4:45PM</h1>
