@@ -110,8 +110,8 @@ export default function Home() {
           <article className="h-full flex flex-col shadow-lg p-2 pr-0 rounded-2xl bg-gradient-to-br from-red-600 to-red-500 duration-200 text-white">
             <div className="h-full flex p-6 pr-0 pb-0 rounded-t-2xl pt-16">
               <FaTram size={65} />
-              <div className=" px-7 flex flex-col justify-center items-end ">
-                <h1 className="text-9xl font-bold">
+              <div className=" px-7 flex flex-col items-end ">
+                <h1 className="text-9xl font-bold mb-2">
                   {tramMinutes[0] > 59
                     ? (tramMinutes[0] / 60).toFixed(0)
                     : tramMinutes[0]}

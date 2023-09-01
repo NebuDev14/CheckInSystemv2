@@ -40,10 +40,12 @@ export const Bus: React.FC = () => {
       </div>
 
       <header className="flex flex-col  justify-center leading-tight w-full rounded-b-2xl">
-        <div className="text-5xl text-right flex  py-2 pb-6">
-          <h1 className="text-3xl py-2 px-3 rounded-r-lg bg-white text-black font-bold mr-auto">
-            Q102
-          </h1>
+        <div className="text-5xl text-right flex  py-2 pb-8">
+          <div className="flex items-center justify-center mr-auto">
+            <h1 className="text-2xl py-3 px-3 rounded-r-lg bg-white text-black font-bold mr-auto">
+              Q102
+            </h1>
+          </div>
           <h1 className=" pr-2 py-2 ml-4 text-4xl">
             {parseInt(nextBus as string) <= 0
               ? ""
