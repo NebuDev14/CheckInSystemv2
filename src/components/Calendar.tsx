@@ -17,20 +17,54 @@ export const Calendar: React.FC = () => {
   );
 
   console.log(
-    new Date(data?.at(0).end).toLocaleTimeString("en-US", {
-      hour12: true,
-      timeStyle: "short",
-    })
+    data?.filter(
+      (event: any) =>
+        new Date().getTime() > new Date(event.start).getTime() &&
+        new Date().getTime() < new Date(event.end).getTime()
+    )
   );
 
   //  max-h-[23rem] overflow-y-hidden
   return (
-    <div className="col-span-6 text-4xl text-black rounded-2xl pb-8  bg-white shadow-lg border-zinc-400 border  items-center justify-center">
+    <div className="col-span-6 text-4xl max-h-[23rem] overflow-y-hidden text-black rounded-2xl pb-8  bg-white shadow-lg border-zinc-400 border  items-center justify-center">
       <div className="flex flex-col">
-        <div className="text-4xl z-50 rounded-t-2xl bg-neutral-500 text-white py-3 flex items-center justify-center">
-          <h1>No events.</h1>
+        <div className="text-4xl z-50 rounded-t-2xl bg-neutral-500 text-white py-3 flex px-4">
+          {data?.filter(
+            (event: any) =>
+              new Date().getTime() > new Date(event.start).getTime() &&
+              new Date().getTime() < new Date(event.end).getTime()
+          ).length !== 0 ? (
+            <div className="flex">
+              <h1 className="font-semibold text-4xl mr-2">
+                {data?.at(0).name.length > 23 ? data?.at(0).name.slice(0, 21) + "..." : data?.at(0).name}
+              </h1>
+              {/* <h1 className="font-semibold text-2xl mt-2">
+                {new Date(data?.at(0).start)
+                  .toLocaleTimeString("en-US", {
+                    hour12: true,
+                    timeStyle: "short",
+                  })
+                  .replace(" ", "")}{" "}
+                -{" "}
+                {new Date(data?.at(0).end)
+                  .toLocaleTimeString("en-US", {
+                    hour12: true,
+                    timeStyle: "short",
+                  })
+                  .replace(" ", "")}
+              </h1> */}
+            </div>
+          ) : (
+            <h1>No events.</h1>
+          )}
         </div>
-        <div style={{ transform: `translateY(-${0}px)` }}>
+        <div
+          style={{
+            transform: `translateY(-${
+              1.8222 * (new Date().getHours() + new Date().getMinutes() / 60)
+            }px)`,
+          }}
+        >
           <div
             className={`flex items-center justify-center px-4 text-red-500 relative z-40`}
             style={{
@@ -49,18 +83,9 @@ export const Calendar: React.FC = () => {
             <hr className="  h-1 bg-red-500  border-red-500 border-2 rounded-full p-2  " />
             <hr className="w-full  h-1 bg-gray-100  border-red-500 border-2 rounded  dark:bg-gray-700" />
           </div>
-          {/* <div
-            className={`flex flex-col bg-violet-800 rounded-xl items-start justify-start p-4 opacity-60 left-[9rem] h-[11.8rem] text-white absolute w-[22rem] z-40`}
-            style={{ top: `${4.75 + 6.75 * 15}rem` }}
-          >
-            <div className="z-50 bg-violet-800">
-              <h1 className="opacity-100 text-3xl  ">3:00 PM - 4:45PM</h1>
-              <h1 className="opacity-100 text-3xl font-bold ">FLL Coaching</h1>
-            </div>
-          </div> */}
           {data?.map((event: any, i: number) => (
             <div
-              className={`flex flex-col bg-violet-800 rounded-xl items-start justify-start p-4 opacity-60 left-[9rem] text-white absolute w-[22rem] z-40`}
+              className={`flex flex-col  bg-violet-800 rounded-xl items-start justify-start p-4 opacity-60 left-[9rem] text-white absolute w-[22rem] `}
               style={{
                 top: `${
                   4.75 +
@@ -76,7 +101,7 @@ export const Calendar: React.FC = () => {
                 }rem`,
               }}
             >
-              <div className="z-50 bg-violet-800">
+              <div className="z-50 ">
                 <h1 className="opacity-100 text-3xl  ">
                   {new Date(event.start)
                     .toLocaleTimeString("en-US", {

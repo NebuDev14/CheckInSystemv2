@@ -15,10 +15,10 @@ export default async function handler(
   inst.events.list({
     calendarId: process.env.CAL_ID,
     orderBy: "startTime",
-    // timeMin: `${new Date().getUTCFullYear()}{-${new Date().getMonth() + 1}-${new Date().getUTCDate()}T00:00:00Z`,
-    // timeMax: `${new Date().getUTCFullYear()}-${new Date().getMonth() + 1}-${new Date().getUTCDate()}T23:59:00Z`,
-    timeMin: `2023-9-1T00:00:00Z`,
-    timeMax: `2023-9-1T23:59:00Z`,
+    timeMin: `${new Date().getUTCFullYear()}-${new Date().getMonth() + 1}-${new Date().getUTCDate()}T00:00:00Z`,
+    timeMax: `${new Date().getUTCFullYear()}-${new Date().getMonth() + 1}-${new Date().getUTCDate()}T23:59:00Z`,
+    // timeMin: `2023-9-1T00:00:00Z`,
+    // timeMax: `2023-9-1T23:59:00Z`,
     maxResults: 10,
     singleEvents: true,
   }, (e, resp) => {
