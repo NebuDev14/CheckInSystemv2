@@ -106,7 +106,7 @@ export default function Home() {
               : ""
           }
         />
-        <div className="grid grid-cols-3 gap-6 mt-2 mb-8">
+        <div className="grid grid-cols-3 gap-6 mt-2 mb-6">
           <article className="h-full flex flex-col shadow-lg p-2 pr-0 rounded-2xl bg-gradient-to-br from-red-600 to-red-500 duration-200 text-white">
             <div className="h-full flex p-6 pr-0 pb-0 rounded-t-2xl pt-16">
               <FaTram size={65} />
