@@ -13,7 +13,7 @@ export default async function handler(
   })
 
   inst.events.list({
-    calendarId: "nycfirst.org_tj6mah4fu3tup7871n70mlva88@group.calendar.google.com",
+    calendarId: process.env.CAL_ID,
     orderBy: "startTime",
     // timeMin: `${new Date().getUTCFullYear()}{-${new Date().getMonth() + 1}-${new Date().getUTCDate()}T00:00:00Z`,
     // timeMax: `${new Date().getUTCFullYear()}-${new Date().getMonth() + 1}-${new Date().getUTCDate()}T23:59:00Z`,
