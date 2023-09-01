@@ -61,7 +61,7 @@ export const Calendar: React.FC = () => {
         <div
           style={{
             transform: `translateY(-${
-              1.8222 * (new Date().getHours() + new Date().getMinutes() / 60)
+              1.8222 * (new Date().getHours()*60 + new Date().getMinutes() / 60)
             }px)`,
           }}
         >
